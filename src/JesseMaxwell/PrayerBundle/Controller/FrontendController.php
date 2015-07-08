@@ -21,6 +21,7 @@
 
 namespace JesseMaxwell\PrayerBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -28,15 +29,17 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class FrontendController extends Controller
 {
     /**
-     * @Route("/request/add", name="_add_request")
+     * @Route("/request/add/{title}", name="_add_request")
+     * @Method("POST")
      */
-    public function addPrayerRequestAction()
+    public function addPrayerRequestAction($title)
     {
         $response = array(
             'success' => true,
             'content' => "Successfully added the request",
+            'name'    => $title
         );
 
-        return new JsonResponse(json_encode($response));
+        return new JsonResponse($response);
     }
 }

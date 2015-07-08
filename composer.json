@@ -1,5 +1,6 @@
 {
     "name": "jessemaxwell/prayer",
+    "description": "Side project intended to build my skills",
     "license": "proprietary",
     "type": "project",
     "autoload": {
