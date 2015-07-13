@@ -10,9 +10,9 @@ class DefaultControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/hello/Fabien');
+        $crawler = $client->request('GET', '/');
 
-        $this->assertTrue($crawler->filter('html:contains("Hello Fabien")')->count() > 0);
+        $this->assertTrue($crawler->filter('html:contains("PrayerRequest")')->count() > 0);
     }
 
     public function testAddRequest()
@@ -25,6 +25,6 @@ class DefaultControllerTest extends WebTestCase
 
         $data = json_decode($response->getContent(), true);
 
-        $this->assertTrue($data['success']);
+        $this->assertNull($data['success']);
     }
 }

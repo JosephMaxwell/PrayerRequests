@@ -1,7 +1,8 @@
-jesse_maxwell_prayer_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: JesseMaxwellPrayerBundle:Default:index }
+default:
+    resource: @JesseMaxwellPrayerBundle/Controller/DefaultController.php
+    type: annotation
 
 frontend:
     resource: @JesseMaxwellPrayerBundle/Controller/FrontendController.php
     type: annotation
+    prefix: /{username}

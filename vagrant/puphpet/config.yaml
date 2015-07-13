@@ -138,8 +138,8 @@ nginx:
 apache:
     install: '1'
     settings:
-        user: www-data
-        group: www-data
+        user: vagrant
+        group: vagrant
         default_vhost: true
         manage_user: false
         manage_group: false
@@ -214,7 +214,7 @@ xdebug:
     install: '1'
     settings:
         xdebug.default_enable: '1'
-        xdebug.remote_autostart: '0'
+        xdebug.remote_autostart: '1'
         xdebug.remote_connect_back: '1'
         xdebug.remote_enable: '1'
         xdebug.remote_handler: dbgp

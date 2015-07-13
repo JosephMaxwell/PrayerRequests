@@ -28,16 +28,22 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class FrontendController extends Controller
 {
+    public function __construct($username)
+    {
+        $this->username = $username;
+    }
+
     /**
      * @Route("/request/add/{title}", name="_add_request")
-     * @Method("POST")
+     * @Method("GET")
      */
     public function addPrayerRequestAction($title)
     {
         $response = array(
             'success' => true,
             'content' => "Successfully added the request",
-            'name'    => $title
+            'name'    => $title,
+            'you'     => $this->get('request')->get('username')
         );
 
         return new JsonResponse($response);
