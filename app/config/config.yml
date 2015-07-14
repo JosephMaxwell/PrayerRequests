@@ -18,7 +18,9 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
-    #serializer:      { enable_annotations: true }
+    serializer:
+        enabled: true
+        enable_annotations: true
     templating:
         engines: ['twig']
         #assets_version: SomeVersionScheme
@@ -70,6 +72,24 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+
+propel:
+    dbal:
+        driver:   mysql
+        user:     "%database_user%"
+        password: "%database_password%"
+        dsn:      mysql:host=%database_host%;dbname=%database_name%;charset=UTF8
+        options:              {}
+        attributes:           {}
+
+sensio_framework_extra:
+    view:    { annotations: false }
+
+fos_rest:
+    allowed_methods_listener: true
+    view:
+        view_response_listener: force
+    disable_csrf_role: ROLE_API
 
 # Swiftmailer Configuration
 swiftmailer:

@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new JesseMaxwell\PrayerBundle\JesseMaxwellPrayerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Propel\PropelBundle\PropelBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

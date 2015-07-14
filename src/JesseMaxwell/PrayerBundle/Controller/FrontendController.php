@@ -21,55 +21,58 @@
 
 namespace JesseMaxwell\PrayerBundle\Controller;
 
-use JesseMaxwell\PrayerBundle\Entity\PrayerRequest;
-use JesseMaxwell\PrayerBundle\Entity\User;
+use JesseMaxwell\PrayerBundle\Model\PrayerRequest;
+use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use JesseMaxwell\PrayerBundle\Model\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
+use FOS\RestBundle\Controller\Annotations as Rest;
 
 class FrontendController extends Controller
 {
     /**
+     * @Rest\View
      * @Route("/request/add/", name="_add_request")
      * @Method("PUT")
      * @ParamConverter("username", class="JesseMaxwellPrayerBundle:User", options={"mapping": {"username": "username"}})
      */
     public function addPrayerRequestAction(User $username)
     {
-        $request       = $this->get('request');
-        $prayerRequest = new PrayerRequest();
-        $responseMessage = $this->container->get('prayer.responses');
-
-        $prayerRequest
-            ->setTitle($request->get('title'))
-            ->setDate(new \DateTime($request->get('date')))
-            ->setDescription($request->get('description'))
-            ->setAnswered($request->get('answered'))
-            ->setUserId($username->getId());
-
-        $errors = $this->get('validator')->validate($prayerRequest);
-
-        if (count($errors) > 0) {
-            return new JsonResponse($responseMessage->errorMessage(
-                'The information that you entered is invalid.',
-                $errors
-            ));
-        }
-
-        $em = $this->getDoctrine()->getManager();
-
-        $em->persist($prayerRequest);
-        $em->flush();
-
-        return new JsonResponse(
-            $responseMessage->successMessage(
-                $prayerRequest->getId(),
-                "Successfully added request."
-            )
-        );
+//        $request       = $this->get('request');
+//        $prayerRequest = new PrayerRequest();
+//        $responseMessage = $this->container->get('prayer.responses');
+//
+//        $prayerRequest
+//            ->setTitle($request->get('title'))
+//            ->setDate(new \DateTime($request->get('date')))
+//            ->setDescription($request->get('description'))
+//            ->setAnswered($request->get('answered'))
+//            ->setUserId($username->getId());
+//
+//        $errors = $this->get('validator')->validate($prayerRequest);
+//
+//        if (count($errors) > 0) {
+//            return new JsonResponse($responseMessage->errorMessage(
+//                'The information that you entered is invalid.',
+//                $errors
+//            ));
+//        }
+//
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $em->persist($prayerRequest);
+//        $em->flush();
+//
+//        return new JsonResponse(
+//            $responseMessage->successMessage(
+//                $prayerRequest->getId(),
+//                "Successfully added request."
+//            )
+//        );
     }
 
     /**
@@ -109,13 +112,15 @@ class FrontendController extends Controller
     }
 
     /**
+     * @Rest\View
      * @Route("/get/request/all", name="_get_all_requests")
      * @Method("GET")
-     * @ParamConverter("user", class="JesseMaxwellPrayerBundle:User", options={"mapping": {"username": "username"}})
      */
-    public function getAllRequestsAction(User $user)
+    public function getAllRequestsAction()
     {
+        $prayerRequests = PrayerRequestQuery::create()->find();
 
+        return array('prayer_requests' => $prayerRequests);
     }
 
     /**
