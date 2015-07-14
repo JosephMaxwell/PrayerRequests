@@ -65,4 +65,18 @@ class PrayerRequestPersistenceHandler
 
         $this->em->flush();
     }
+
+    public function remove($id)
+    {
+        $prayerRequest = $this->repository->find($id);
+
+        if (!$prayerRequest) {
+            throw new EntityNotFoundException(
+                'No prayer request found for id ' . $id
+            );
+        }
+
+        $this->em->remove($prayerRequest);
+        $this->em->flush();
+    }
 }

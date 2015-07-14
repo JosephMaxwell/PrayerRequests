@@ -79,17 +79,6 @@ class FrontendController extends Controller
      */
     public function updatePrayerRequestAction(User $user, $id)
     {
-//        $em            = $this->getDoctrine()->getManager();
-//        $prayerRequest = $em->getRepository(
-//            'JesseMaxwellPrayerBundle:PrayerRequest'
-//        )->find($id);
-//
-//        if ($user->getId() !== $prayerRequest->getUserId()) {
-//            throw $this->createNotFoundException(
-//                'Sorry, you can not update id ' . $id
-//            );
-//        }
-
         $this->container->get('prayer.verify_action')->verifyUserPrayerRequestRelationship($user, $id);
 
         $this->container->get('model.persistence_handler')->update($this->get('request')->request, $id);
@@ -108,29 +97,34 @@ class FrontendController extends Controller
      */
     public function deletePrayerRequestAction(User $user, $id)
     {
-        $em            = $this->getDoctrine()->getManager();
-        $prayerRequest = $em->getRepository(
-            'JesseMaxwellPrayerBundle:PrayerRequest'
-        )->find($id);
+        $this->container->get('prayer.verify_action')->verifyUserPrayerRequestRelationship($user, $id);
 
-        if ($prayerRequest) {
-            $em->remove($prayerRequest);
-            $em->flush();
+        $this->container->get('model.persistence_handler')->remove($id);
 
-            $response = array(
-                'success' => true,
-                'content' => "Successfully removed request",
-                'errors'  => false,
-            );
-        } else {
-            $response = array(
-                'success' => false,
-                'content' => "Unable to delete the request",
-                'errors'  => true,
-            );
-            $response = $this->get('response')->failureMessage("Unable to delete the request");
-        }
+        return new JsonResponse(
+            $this->container
+                ->get('prayer.responses')
+                ->successMessage($id, 'Successfully removed the request.')
+        );
+    }
 
-        return new JsonResponse($response);
+    /**
+     * @Route("/get/request/all", name="_get_all_requests")
+     * @Method("GET")
+     * @ParamConverter("user", class="JesseMaxwellPrayerBundle:User", options={"mapping": {"username": "username"}})
+     */
+    public function getAllRequestsAction(User $user)
+    {
+
+    }
+
+    /**
+     * @Route("/get/request/{id}", name="_get_request", requirements={"id" = "\d+"})
+     * @Method("GET")
+     * @ParamConverter("user", class="JesseMaxwellPrayerBundle:User", options={"mapping": {"username": "username"}})
+     */
+    public function getRequestAction(User $user)
+    {
+
     }
 }

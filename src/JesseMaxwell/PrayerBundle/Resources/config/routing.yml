@@ -6,3 +6,4 @@ frontend:
     resource: @JesseMaxwellPrayerBundle/Controller/FrontendController.php
     type: annotation
     prefix: /{username}
+    defaults: { _format: json }
