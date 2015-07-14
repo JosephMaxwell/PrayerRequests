@@ -22,12 +22,14 @@ namespace JesseMaxwell\PrayerBundle\Entity;
  **/
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="request")
+ * @ORM\Table(name="prayer_request")
+ * @ORM\Entity(repositoryClass="JesseMaxwell\PrayerBundle\Entity\PrayerRequestRepository")
  */
-class Request
+class PrayerRequest
 {
     /**
      * @ORM\Column(type="integer")
@@ -36,18 +38,25 @@ class Request
      */
     protected $id;
 
+
     /**
      * @ORM\Column(type="string", length=150)
+     * @Assert\Length(max=150)
      */
     protected $title;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
+     * @Assert\Type(
+     *  type="bool",
+     *  message="Please provide only true or false: true for answered, false for unanswered."
+     * )
      */
     protected $description;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\DateTime()
      */
     protected $date;
 
@@ -55,6 +64,11 @@ class Request
      * @ORM\Column(type="integer")
      */
     protected $userId;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    protected $answered;
 
     /**
      * Get id
@@ -70,7 +84,7 @@ class Request
      * Set title
      *
      * @param string $title
-     * @return Request
+     * @return PrayerRequest
      */
     public function setTitle($title)
     {
@@ -93,7 +107,7 @@ class Request
      * Set description
      *
      * @param string $description
-     * @return Request
+     * @return PrayerRequest
      */
     public function setDescription($description)
     {
@@ -116,7 +130,7 @@ class Request
      * Set date
      *
      * @param \DateTime $date
-     * @return Request
+     * @return PrayerRequest
      */
     public function setDate($date)
     {
@@ -136,33 +150,10 @@ class Request
     }
 
     /**
-     * Set userKey
-     *
-     * @param string $userKey
-     * @return Request
-     */
-    public function setUserKey($userKey)
-    {
-        $this->userKey = $userKey;
-
-        return $this;
-    }
-
-    /**
-     * Get userKey
-     *
-     * @return string 
-     */
-    public function getUserKey()
-    {
-        return $this->userKey;
-    }
-
-    /**
      * Set userId
      *
      * @param integer $userId
-     * @return Request
+     * @return PrayerRequest
      */
     public function setUserId($userId)
     {
@@ -179,5 +170,28 @@ class Request
     public function getUserId()
     {
         return $this->userId;
+    }
+
+    /**
+     * Set answered
+     *
+     * @param boolean $answered
+     * @return PrayerRequest
+     */
+    public function setAnswered($answered)
+    {
+        $this->answered = $answered;
+
+        return $this;
+    }
+
+    /**
+     * Get answered
+     *
+     * @return boolean 
+     */
+    public function getAnswered()
+    {
+        return $this->answered;
     }
 }

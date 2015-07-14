@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysis>
+  <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4" rel="self" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4/status" rel="status" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69" rel="project" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4" rel="self" type="text/html"/>
+  <status><![CDATA[finished]]></status>
+  <violations>
+    <violation severity="info" category="bugrisk">
+      <line>0</line>
+      <resource><![CDATA[composer.lock]]></resource>
+      <title>The composer.lock is not up to date.</title>
+      <message><![CDATA[The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. Run update to update them.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983713" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>51</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Controller/FrontendController.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="46" end-line="51"><![CDATA[            'you'     => $this->get('request')->get('username')
+        );
+
+        return new JsonResponse($response);
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983736" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>15</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/locales/.travis.yml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="10" end-line="15"><![CDATA[  - rvm: 1.8.7
+    env: PUPPET_GEM_VERSION="~> 2.7.0" FACTER_GEM_VERSION="~> 1.7.0"
+  - rvm: 1.9.3
+    env: PUPPET_GEM_VERSION="~> 3.0"
+  - rvm: 2.0.0
+    env: PUPPET_GEM_VERSION="~> 3.0"]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983739" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>31</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/mailcatcher/.travis.yml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="26" end-line="31"><![CDATA[    - rvm: 2.0.0
+      env: PUPPET_GEM_VERSION="~> 3.1.0"
+    - rvm: 1.8.7
+      env: PUPPET_GEM_VERSION="~> 3.2.0"
+notifications:
+  email: false]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983744" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>14</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/nginx/composer.json]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="9" end-line="14"><![CDATA[    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983732" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>11</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/nginx/LICENSE]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="6" end-line="11"><![CDATA[
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983719" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>10</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/supervisord/.fixtures.yml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="5" end-line="10"><![CDATA[      ref: '4.1.0'
+    'concat':
+      repo: 'git://github.com/puppetlabs/puppetlabs-concat'
+      ref: '1.0.1'
+  symlinks:
+    supervisord: "#{source_dir}"]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983734" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>12</line>
+      <resource><![CDATA[web/app.php]]></resource>
+      <title>Commented code should not be committed</title>
+      <message><![CDATA[Commented out code reduces readability and lowers the code confidence for other developers. If it's common usage for debug, it should not be committed. Using a version control system, such code can be safely removed.]]></message>
+      <context start-line="7" end-line="17"><![CDATA[
+// Enable APC for autoloading to improve performance.
+// You should change the ApcClassLoader first argument to a unique prefix
+// in order to prevent cache key conflicts with other applications
+// also using APC.
+/*
+$apcLoader = new ApcClassLoader(sha1(__FILE__), $loader);
+$loader->unregister();
+$apcLoader->register(true);
+*/
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983725" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>19</line>
+      <resource><![CDATA[web/app.php]]></resource>
+      <title>Commented code should not be committed</title>
+      <message><![CDATA[Commented out code reduces readability and lowers the code confidence for other developers. If it's common usage for debug, it should not be committed. Using a version control system, such code can be safely removed.]]></message>
+      <context start-line="14" end-line="24"><![CDATA[$loader->unregister();
+$apcLoader->register(true);
+*/
+
+require_once __DIR__.'/../app/AppKernel.php';
+//require_once __DIR__.'/../app/AppCache.php';
+
+$kernel = new AppKernel('prod', false);
+$kernel->loadClassCache();
+//$kernel = new AppCache($kernel);
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983715" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>23</line>
+      <resource><![CDATA[web/app.php]]></resource>
+      <title>Commented code should not be committed</title>
+      <message><![CDATA[Commented out code reduces readability and lowers the code confidence for other developers. If it's common usage for debug, it should not be committed. Using a version control system, such code can be safely removed.]]></message>
+      <context start-line="18" end-line="28"><![CDATA[require_once __DIR__.'/../app/AppKernel.php';
+//require_once __DIR__.'/../app/AppCache.php';
+
+$kernel = new AppKernel('prod', false);
+$kernel->loadClassCache();
+//$kernel = new AppCache($kernel);
+
+// When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
+//Request::enableHttpMethodParameterOverride();
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983737" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>26</line>
+      <resource><![CDATA[web/app.php]]></resource>
+      <title>Commented code should not be committed</title>
+      <message><![CDATA[Commented out code reduces readability and lowers the code confidence for other developers. If it's common usage for debug, it should not be committed. Using a version control system, such code can be safely removed.]]></message>
+      <context start-line="21" end-line="31"><![CDATA[$kernel = new AppKernel('prod', false);
+$kernel->loadClassCache();
+//$kernel = new AppCache($kernel);
+
+// When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
+//Request::enableHttpMethodParameterOverride();
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);
+$response->send();
+$kernel->terminate($request, $response);
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983748" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>21</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/DependencyInjection/Configuration.php]]></resource>
+      <title>Unused method, property, variable or parameter</title>
+      <message><![CDATA[This rootNode local variable is declared but never used. You should remove it.]]></message>
+      <context start-line="16" end-line="26"><![CDATA[     * {@inheritdoc}
+     */
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('jesse_maxwell_prayer');
+
+        // Here you should define the parameters that are allowed to
+        // configure your bundle. See the documentation linked above for
+        // more information on that topic.
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983726" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>23</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/DependencyInjection/JesseMaxwellPrayerExtension.php]]></resource>
+      <title>Unused method, property, variable or parameter</title>
+      <message><![CDATA[This config local variable is declared but never used. You should remove it.]]></message>
+      <context start-line="18" end-line="28"><![CDATA[     * {@inheritdoc}
+     */
+    public function load(array $configs, ContainerBuilder $container)
+    {
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('services.yml');
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983741" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>3</line>
+      <resource><![CDATA[web/app.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Symfony\Component\ClassLoader\ApcClassLoader is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="1" end-line="8"><![CDATA[<?php
+
+use Symfony\Component\ClassLoader\ApcClassLoader;
+use Symfony\Component\HttpFoundation\Request;
+
+$loader = require_once __DIR__.'/../app/bootstrap.php.cache';
+
+// Enable APC for autoloading to improve performance.]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983738" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="critical" category="security">
+      <line>62</line>
+      <resource><![CDATA[vagrant/puphpet/config.yaml]]></resource>
+      <title>Sensitive data should not be present in non-parameter configuration files</title>
+      <message><![CDATA[A sensitive data has been detected in your configuration file (username parameter). You should consider storing it in a single parameter file.]]></message>
+      <context start-line="57" end-line="67"><![CDATA[            stop: 10500
+    ssh:
+        host: null
+        port: null
+        private_key_path: null
+        username: vagrant
+        guest_port: null
+        keep_alive: true
+        forward_agent: false
+        forward_x11: false
+        shell: 'bash -l']]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983708" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="critical" category="security">
+      <line>141</line>
+      <resource><![CDATA[vagrant/puphpet/config.yaml]]></resource>
+      <title>Sensitive data should not be present in non-parameter configuration files</title>
+      <message><![CDATA[A sensitive data has been detected in your configuration file (user parameter). You should consider storing it in a single parameter file.]]></message>
+      <context start-line="136" end-line="146"><![CDATA[                        - 'APP_ENV dev'
+    proxies: {  }
+apache:
+    install: '1'
+    settings:
+        user: vagrant
+        group: vagrant
+        default_vhost: true
+        manage_user: false
+        manage_group: false
+        sendfile: 0]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=new#295983749" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="critical" category="security">
+      <line>279</line>
+      <resource><![CDATA[vagrant/puphpet/config.yaml]]></resource>
+      <title>Sensitive data should not be present in non-parameter configuration files</title>
+      <message><![CDATA[A sensitive data has been detected in your configuration file (password parameter). You should consider storing it in a single parameter file.]]></message>
+      <context start-line="274" end-line="284"><![CDATA[        override_options: {  }
+    adminer: 0
+    users:
+        mysqlnu_5ep56s7eaubc:
+            name: jesse
+            password: jessem
+    databases:
+        mysqlnd_zy5r67cqyf48:
+            name: prayer_requests
+            sql: ''
+    grants:]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983712" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security">
+      <line>0</line>
+      <title>Symfony error pages should be customised</title>
+      <message><![CDATA[You should customize the 404 error page.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983714" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security">
+      <line>0</line>
+      <title>Symfony error pages should be customised</title>
+      <message><![CDATA[You should customize the 500 error page.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983747" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="critical" category="security">
+      <line>0</line>
+      <title>Symfony2 secret should be changed</title>
+      <message><![CDATA[The secret is the default one from the Symfony Standard Edition]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983707" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="security">
+      <line>0</line>
+      <title>Default session cookie's name should be changed.</title>
+      <message><![CDATA[The session cookie name is the default one, PHPSESSID. You should consider overwriting it thanks to session.name parameter (see the official documentation).]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983742" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security">
+      <line>0</line>
+      <title>A route should always have a valid HTTP method</title>
+      <message><![CDATA[The route "_index" should have a routing method (GET/POST/PUT). It is mandatory.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=new#295983716" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security">
+      <line>0</line>
+      <title>A route should always have a valid HTTP method</title>
+      <message><![CDATA[The route "homepage" should have a routing method (GET/POST/PUT). It is mandatory.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983730" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="major" category="security">
+      <line>0</line>
+      <resource><![CDATA[web]]></resource>
+      <title>Symfony applications should not contain a config.php file</title>
+      <message><![CDATA[This config.php file should only be used to bootstrap a Symfony application. Before releasing to production, you should remove it, otherwise attackers could get valuable insight about your application.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983717" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="major" category="bugrisk">
+      <line>15</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/apache/manifests/mod/disk_cache.pp]]></resource>
+      <title>Source code should not contain FIXME comments</title>
+      <message><![CDATA[FIXME comments are left in the code when a bug has been noticed but not fixed. You should fix the bug and remove the comment.]]></message>
+      <context start-line="10" end-line="20"><![CDATA[    'FreeBSD' => 'cache_disk',
+    default   => 'disk_cache',
+  }
+
+  if $::osfamily != 'FreeBSD' {
+    # FIXME: investigate why disk_cache was dependent on proxy
+    # NOTE: on FreeBSD disk_cache is compiled by default but proxy is not
+    Class['::apache::mod::proxy'] -> Class['::apache::mod::disk_cache']
+  }
+  Class['::apache::mod::cache'] -> Class['::apache::mod::disk_cache']
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983718" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>352</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/apache/manifests/params.pp]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="347" end-line="357"><![CDATA[    }
+    $conf_template        = 'apache/httpd.conf.erb'
+    $keepalive            = 'Off'
+    $keepalive_timeout    = 15
+    $max_keepalive_requests = 100
+    $fastcgi_lib_path     = undef # TODO: revisit
+    $mime_support_package = 'misc/mime-support'
+    $mime_types_config    = '/usr/local/etc/mime.types'
+    $wsgi_socket_prefix   = undef
+    $docroot              = '/usr/local/www/apache24/data'
+    $error_documents_path = '/usr/local/www/apache24/error']]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983706" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>413</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/apache/manifests/params.pp]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="408" end-line="418"><![CDATA[    }
+    $conf_template        = 'apache/httpd.conf.erb'
+    $keepalive            = 'Off'
+    $keepalive_timeout    = 15
+    $max_keepalive_requests = 100
+    $fastcgi_lib_path     = undef # TODO: revisit
+    $mime_support_package = 'app-misc/mime-types'
+    $mime_types_config    = '/etc/mime.types'
+    $wsgi_socket_prefix   = undef
+    $docroot              = '/var/www/localhost/htdocs'
+    $error_documents_path = '/usr/share/apache2/error']]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983721" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>55</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/beanstalkd/manifests/init.pp]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="50" end-line="60"><![CDATA[      $configtemplate     = "${module_name}/redhat/beanstalkd_sysconfig.erb"
+      $hasstatus          = 'true'
+      $restart            = '/etc/init.d/beanstalkd restart'
+      $mode               = 0644
+    }
+    # TODO: add more OS support!
+    default: {
+      fail("ERROR [${module_name}]: I don't know how to manage this OS: ${::operatingsystem}")
+    }
+  }
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983720" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>949</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/firewall/lib/puppet/type/firewall.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="944" end-line="954"><![CDATA[  end
+
+  validate do
+    debug("[validate]")
+
+    # TODO: this is put here to skip validation if ensure is not set. This
+    # is because there is a revalidation stage called later where the values
+    # are not set correctly. I tried tracing it - but have put in this
+    # workaround instead to skip. Must get to the bottom of this.
+    if ! value(:ensure)
+      return]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983740" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>47</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/firewall/lib/puppet/util/firewall.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="42" end-line="52"><![CDATA[    end
+  end
+
+  # Convert log_level names to their respective numbers
+  def log_level_name_to_number(value)
+    #TODO make this 0-7 only
+    if value =~ /\d/
+      value
+    else
+      case value
+        when "panic" then "0"]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983724" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>147</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/mongodb/lib/puppet/provider/mongodb_replset/mongo.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="142" end-line="152"><![CDATA[    end
+  end
+
+  def set_members
+    if @property_flush[:ensure] == :absent
+      # TODO: I don't know how to remove a node from a replset; unimplemented
+      #Puppet.debug "Removing all members from replset #{self.name}"
+      #@property_hash[:members].collect do |member|
+      #  rs_remove(member, master_host(@property_hash[:members]))
+      #end
+      return]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983743" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>43</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/postgresql/manifests/server/grant.pp]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="38" end-line="48"><![CDATA[    #'VIEW',
+  )
+  # You can use ALL TABLES IN SCHEMA by passing schema_name to object_name
+
+  ## Validate that the object type's privilege is acceptable
+  # TODO: this is a terrible hack; if they pass "ALL" as the desired privilege,
+  #  we need a way to test for it--and has_database_privilege does not
+  #  recognize 'ALL' as a valid privilege name. So we probably need to
+  #  hard-code a mapping between 'ALL' and the list of actual privileges that
+  #  it entails, and loop over them to check them.  That sort of thing will
+  #  probably need to wait until we port this over to ruby, so, for now, we're]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983723" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>67</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/puppi/files/scripts/get_metadata.sh]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="62" end-line="72"><![CDATA[case $source_type in
+    list)
+    if [ -z $suffix ] ; then
+        suffix="####"
+    fi
+    # TODO Make this more secure, for God's sake!
+    for param in $(cat $downloadedfile | grep "^$suffix" ) ; do
+        save_runtime_comment $param
+    done
+    ;;
+    tarball)]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983711" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>75</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/puppi/manifests/params.pp]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="70" end-line="80"><![CDATA[      default => $::ntp_server,
+    }
+  }
+
+# Mcollective paths
+# TODO: Add Paths for Puppet Enterprise:
+# /opt/puppet/libexec/mcollective/mcollective/
+  $mcollective = $::operatingsystem ? {
+    debian  => '/usr/share/mcollective/plugins/mcollective',
+    ubuntu  => '/usr/share/mcollective/plugins/mcollective',
+    centos  => '/usr/libexec/mcollective/mcollective',]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983729" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>22</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/rvm/manifests/passenger/apache.pp]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="17" end-line="27"><![CDATA[    ruby_version => $ruby_version,
+    version      => $version,
+    proxy_url    => $proxy_url
+  }
+
+  # TODO: How can we get the gempath automatically using the ruby version
+  # Can we read the output of a command into a variable?
+  # e.g. $gempath = `usr/local/rvm/bin/rvm ${ruby_version} exec rvm gemdir`
+  $gempath = "${rvm_prefix}/rvm/gems/${ruby_version}/gems"
+  $binpath = "${rvm_prefix}/rvm/bin/"
+  $gemroot = "${gempath}/passenger-${version}"]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983710" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>28</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/stdlib/lib/puppet/parser/functions/is_integer.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="23" end-line="33"><![CDATA[    # Regex is taken from the lexer of puppet
+    # puppet/pops/parser/lexer.rb but modified to match also
+    # negative values and disallow numbers prefixed with multiple
+    # 0's
+    #
+    # TODO these parameter should be a constant but I'm not sure
+    # if there is no risk to declare it inside of the module
+    # Puppet::Parser::Functions
+
+    # Integer numbers like
+    # -1234568981273]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983745" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>39</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/stdlib/lib/puppet/parser/functions/is_numeric.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="34" end-line="44"><![CDATA[    # Regex is taken from the lexer of puppet
+    # puppet/pops/parser/lexer.rb but modified to match also
+    # negative values and disallow invalid octal numbers or
+    # numbers prefixed with multiple 0's (except in hex numbers)
+    #
+    # TODO these parameters should be constants but I'm not sure
+    # if there is no risk to declare them inside of the module
+    # Puppet::Parser::Functions
+
+    # TODO decide if this should be used
+    # HEX numbers like]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983705" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>43</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/stdlib/lib/puppet/parser/functions/is_numeric.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="38" end-line="48"><![CDATA[    #
+    # TODO these parameters should be constants but I'm not sure
+    # if there is no risk to declare them inside of the module
+    # Puppet::Parser::Functions
+
+    # TODO decide if this should be used
+    # HEX numbers like
+    # 0xaa230F
+    # 0X1234009C
+    # 0x0012
+    # -12FcD]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983746" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>51</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/stdlib/lib/puppet/parser/functions/is_numeric.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="46" end-line="56"><![CDATA[    # 0X1234009C
+    # 0x0012
+    # -12FcD
+    #numeric_hex = %r{^-?0[xX][0-9A-Fa-f]+$}
+
+    # TODO decide if this should be used
+    # OCTAL numbers like
+    # 01234567
+    # -045372
+    #numeric_oct = %r{^-?0[1-7][0-7]*$}
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983735" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>6</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/vcsrepo/lib/puppet/provider/vcsrepo/git.rb]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="1" end-line="11"><![CDATA[require File.join(File.dirname(__FILE__), '..', 'vcsrepo')
+
+Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) do
+  desc "Supports Git repositories"
+
+  ##TODO modify the commands below so that the su - is included
+  optional_commands :git => 'git',
+                    :su  => 'su'
+  has_features :bare_repositories, :reference_tracking, :ssh_identity, :multiple_remotes, :user
+
+  def create]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983733" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="performance">
+      <line>0</line>
+      <resource><![CDATA[app/.htaccess]]></resource>
+      <title>.htaccess should be avoided</title>
+      <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983727" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="performance">
+      <line>0</line>
+      <resource><![CDATA[src/.htaccess]]></resource>
+      <title>.htaccess should be avoided</title>
+      <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983722" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="performance">
+      <line>0</line>
+      <resource><![CDATA[web/.htaccess]]></resource>
+      <title>.htaccess should be avoided</title>
+      <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983709" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security">
+      <line>0</line>
+      <resource><![CDATA[web/apple-touch-icon.png]]></resource>
+      <title>Default favicon should be changed</title>
+      <message><![CDATA[Default Apple touch Symfony2 favicon found.
+             This reveals the backend engine of the application and makes it more vulnerable to attackers. Consider using a custom favicon instead - plus, your users will memorize your application more easily.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983731" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security">
+      <line>0</line>
+      <resource><![CDATA[web/favicon.ico]]></resource>
+      <title>Default favicon should be changed</title>
+      <message><![CDATA[Default default HiDPI Symfony2 favicon found.
+             This reveals the backend engine of the application and makes it more vulnerable to attackers. Consider using a custom favicon instead - plus, your users will memorize your application more easily.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983728" rel="self" type="text/html"/>
+    </violation>
+  </violations>
+  <grades>
+    <entry><![CDATA[none]]></entry>
+    <entry><![CDATA[bronze]]></entry>
+    <entry><![CDATA[silver]]></entry>
+    <entry><![CDATA[gold]]></entry>
+    <entry><![CDATA[platinum]]></entry>
+  </grades>
+  <failed>false</failed>
+  <grade><![CDATA[none]]></grade>
+  <next-grade><![CDATA[bronze]]></next-grade>
+  <begin-at><![CDATA[2015-07-13T18:47:31+0200]]></begin-at>
+  <end-at><![CDATA[2015-07-13T18:48:20+0200]]></end-at>
+  <duration>21</duration>
+  <number>4</number>
+  <altered>false</altered>
+  <remediation-cost>87.5</remediation-cost>
+  <nb-violations>45</nb-violations>
+  <reference><![CDATA[3ffbf437a1ddfb3f8f81ea14e1c2ae02a5663ee5]]></reference>
+  <configuration>
+    <ignored-branches>
+      <branch><![CDATA[gh-pages]]></branch>
+    </ignored-branches>
+    <pre-composer-script/>
+    <post-composer-script/>
+    <php-ini/>
+    <global-excluded-dirs>
+      <dir><![CDATA[vendor]]></dir>
+      <dir><![CDATA[vendors]]></dir>
+      <dir><![CDATA[test]]></dir>
+      <dir><![CDATA[tests]]></dir>
+      <dir><![CDATA[Tests]]></dir>
+      <dir><![CDATA[spec]]></dir>
+      <dir><![CDATA[features]]></dir>
+      <dir><![CDATA[Fixtures]]></dir>
+      <dir><![CDATA[DataFixtures]]></dir>
+      <dir><![CDATA[var]]></dir>
+    </global-excluded-dirs>
+    <excluded-patterns>
+      <pattern><![CDATA[app/check.php]]></pattern>
+      <pattern><![CDATA[app/SymfonyRequirements.php]]></pattern>
+      <pattern><![CDATA[web/config.php]]></pattern>
+      <pattern><![CDATA[web/app_*.php]]></pattern>
+    </excluded-patterns>
+    <patterns>
+      <file>
+        <pattern><![CDATA[*.php]]></pattern>
+        <pattern><![CDATA[*.twig]]></pattern>
+        <pattern><![CDATA[*.xml]]></pattern>
+        <pattern><![CDATA[*.yml]]></pattern>
+        <pattern><![CDATA[*.yaml]]></pattern>
+        <pattern><![CDATA[*.ini]]></pattern>
+        <pattern><![CDATA[*.dist]]></pattern>
+        <pattern><![CDATA[*.sql]]></pattern>
+        <pattern><![CDATA[composer.*]]></pattern>
+        <pattern><![CDATA[.gitignore]]></pattern>
+        <pattern><![CDATA[license]]></pattern>
+        <pattern><![CDATA[LICENSE]]></pattern>
+        <pattern><![CDATA[readme]]></pattern>
+        <pattern><![CDATA[README]]></pattern>
+        <pattern><![CDATA[makefile]]></pattern>
+        <pattern><![CDATA[Makefile]]></pattern>
+        <pattern><![CDATA[.htaccess]]></pattern>
+      </file>
+      <php>
+        <pattern><![CDATA[*.php]]></pattern>
+      </php>
+      <twig>
+        <pattern><![CDATA[*.twig]]></pattern>
+      </twig>
+    </patterns>
+    <rules/>
+    <parameters>
+      <parameter name="project_type">10</parameter>
+    </parameters>
+  </configuration>
+  <previous-analyses-references>
+    <analysis-reference number="4">3ffbf437a1ddfb3f8f81ea14e1c2ae02a5663ee5</analysis-reference>
+    <analysis-reference number="3">a9a928d0d7efa745fe291b5492df1052df20eea4</analysis-reference>
+    <analysis-reference number="2">c5f479d997ab481ed97e3af68fcb22b8357ae119</analysis-reference>
+    <analysis-reference number="1">19eae5b06098a5abb64d828beee9df9e75a0ebd1</analysis-reference>
+  </previous-analyses-references>
+  <nb-violations-new>2</nb-violations-new>
+  <nb-violations-existing>43</nb-violations-existing>
+  <nb-violations-fixed>2</nb-violations-fixed>
+  <nb-violations-ignored>0</nb-violations-ignored>
+</analysis>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SensioLabsInsightAnalysisStorage">
+    <option name="analysesList">
+      <list>
+        <InsightAnalysis duration="21" href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4" nbViolations="45" nextGrade="BRONZE" number="4" reference="3ffbf437a1ddfb3f8f81ea14e1c2ae02a5663ee5" remediationCostForNextGrade="-1" status="finished" />
+        <InsightAnalysis duration="16" href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/3" nbViolations="45" nextGrade="BRONZE" number="3" reference="a9a928d0d7efa745fe291b5492df1052df20eea4" remediationCostForNextGrade="-1" status="finished" />
+        <InsightAnalysis duration="16" href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/2" nbViolations="43" nextGrade="BRONZE" number="2" reference="c5f479d997ab481ed97e3af68fcb22b8357ae119" remediationCostForNextGrade="-1" status="finished" />
+        <InsightAnalysis duration="52" href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/1" nbViolations="43" nextGrade="BRONZE" number="1" reference="19eae5b06098a5abb64d828beee9df9e75a0ebd1" remediationCostForNextGrade="-1" status="finished" />
+      </list>
+    </option>
+  </component>
+</project>

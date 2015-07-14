@@ -21,30 +21,115 @@
 
 namespace JesseMaxwell\PrayerBundle\Controller;
 
+use JesseMaxwell\PrayerBundle\Entity\PrayerRequest;
+use JesseMaxwell\PrayerBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class FrontendController extends Controller
 {
-    public function __construct($username)
+    /**
+     * @Route("/request/add/", name="_add_request")
+     * @Method("PUT")
+     * @ParamConverter("username", class="JesseMaxwellPrayerBundle:User", options={"mapping": {"username": "username"}})
+     */
+    public function addPrayerRequestAction(User $username)
     {
-        $this->username = $username;
+        $request       = $this->get('request');
+        $prayerRequest = new PrayerRequest();
+        $responseMessage = $this->container->get('prayer.responses');
+
+        $prayerRequest
+            ->setTitle($request->get('title'))
+            ->setDate(new \DateTime($request->get('date')))
+            ->setDescription($request->get('description'))
+            ->setAnswered($request->get('answered'))
+            ->setUserId($username->getId());
+
+        $errors = $this->get('validator')->validate($prayerRequest);
+
+        if (count($errors) > 0) {
+            return new JsonResponse($responseMessage->errorMessage(
+                'The information that you entered is invalid.',
+                $errors
+            ));
+        }
+
+        $em = $this->getDoctrine()->getManager();
+
+        $em->persist($prayerRequest);
+        $em->flush();
+
+        return new JsonResponse(
+            $responseMessage->successMessage(
+                $prayerRequest->getId(),
+                "Successfully added request."
+            )
+        );
     }
 
     /**
-     * @Route("/request/add/{title}", name="_add_request")
-     * @Method("GET")
+     * @Route("/request/update/{id}", name="_update_request")
+     * @Method("PUT")
+     * @ParamConverter("user", class="JesseMaxwellPrayerBundle:User", options={"mapping": {"username": "username"}})
      */
-    public function addPrayerRequestAction($title)
+    public function updatePrayerRequestAction(User $user, $id)
     {
-        $response = array(
-            'success' => true,
-            'content' => "Successfully added the request",
-            'name'    => $title,
-            'you'     => $this->get('request')->get('username')
+//        $em            = $this->getDoctrine()->getManager();
+//        $prayerRequest = $em->getRepository(
+//            'JesseMaxwellPrayerBundle:PrayerRequest'
+//        )->find($id);
+//
+//        if ($user->getId() !== $prayerRequest->getUserId()) {
+//            throw $this->createNotFoundException(
+//                'Sorry, you can not update id ' . $id
+//            );
+//        }
+
+        $this->container->get('prayer.verify_action')->verifyUserPrayerRequestRelationship($user, $id);
+
+        $this->container->get('model.persistence_handler')->update($this->get('request')->request, $id);
+
+        return new JsonResponse(
+            $this->container
+                ->get('prayer.responses')
+                ->successMessage("Successfully updated request")
         );
+    }
+
+    /**
+     * @Route("/request/delete/{id}", name="_delete_request")
+     * @Method("DELETE")
+     * @ParamConverter("user", class="JesseMaxwellPrayerBundle:User", options={"mapping": {"username": "username"}})
+     */
+    public function deletePrayerRequestAction(User $user, $id)
+    {
+        $em            = $this->getDoctrine()->getManager();
+        $prayerRequest = $em->getRepository(
+            'JesseMaxwellPrayerBundle:PrayerRequest'
+        )->find($id);
+
+        if ($prayerRequest) {
+            $em->remove($prayerRequest);
+            $em->flush();
+
+            $response = array(
+                'success' => true,
+                'content' => "Successfully removed request",
+                'errors'  => false,
+            );
+        } else {
+            $response = array(
+                'success' => false,
+                'content' => "Unable to delete the request",
+                'errors'  => true,
+            );
+            $response = $this->get('response')->failureMessage("Unable to delete the request");
+        }
 
         return new JsonResponse($response);
     }
