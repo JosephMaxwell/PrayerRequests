@@ -22,7 +22,8 @@ class ListController extends FOSRestController
      */
     public function getAllRequestsAction()
     {
-        $prayerRequests = PrayerRequestQuery::create()->find();
+        $userId = UserQuery::create()->findOneByUsername($this->get('request')->attributes->get('username'))->getId();
+        $prayerRequests = PrayerRequestQuery::create()->findByUserId($userId);
 
         if (!$prayerRequests) {
             throw new NotFoundHttpException("No prayer requests found.");

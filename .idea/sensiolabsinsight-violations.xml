@@ -1,31 +1,306 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysis>
-  <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4" rel="self" type="application/vnd.com.sensiolabs.insight+xml"/>
-  <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4/status" rel="status" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7" rel="self" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7/status" rel="status" type="application/vnd.com.sensiolabs.insight+xml"/>
   <link href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69" rel="project" type="application/vnd.com.sensiolabs.insight+xml"/>
-  <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4" rel="self" type="text/html"/>
+  <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7" rel="self" type="text/html"/>
   <status><![CDATA[finished]]></status>
   <violations>
-    <violation severity="info" category="bugrisk">
+    <violation severity="info" category="codestyle">
       <line>0</line>
-      <resource><![CDATA[composer.lock]]></resource>
-      <title>The composer.lock is not up to date.</title>
-      <message><![CDATA[The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. Run update to update them.]]></message>
+      <title>Project files should not mix end of lines</title>
+      <message><![CDATA[            
+                Some files contain mixed and/or invalid end of lines ( \r\n instead of \n). Homogenize
+                them to improve compatibility across different platforms.
+            
+            .idea/magicento/adminhtml.xml
+            To solve this issue, run the below command:]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983713" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855922" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>75</line>
+      <resource><![CDATA[app/propel/migrations/PropelMigration_1436989095.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="70" end-line="75"><![CDATA[SET FOREIGN_KEY_CHECKS = 1;
+',
+);
+    }
+
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855852" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>11</line>
+      <resource><![CDATA[app/Resources/TwigBundle/views/Exception/error500.json.twig]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="6" end-line="11"><![CDATA[      'message': status_text,
+      'code': status_code,
+      'exception': exception.toarray
+    },
+  }|json_encode|raw
+}}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855882" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>11</line>
+      <resource><![CDATA[app/Resources/TwigBundle/views/Exception/error.json.twig]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="6" end-line="11"><![CDATA[    'message': status_text,
+    'code': status_code,
+    'exception': exception.toarray
+  },
+}|json_encode|raw
+}}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855877" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>4</line>
+      <resource><![CDATA[.idea/deployment.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="1" end-line="4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="PrayerRequest" />
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855905" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>12</line>
+      <resource><![CDATA[.idea/magicento.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="7" end-line="12"><![CDATA[    <option name="enabled" value="false" />
+    <option name="projectClosedCorrectly" value="false" />
+    <option name="pathsToMagentoSerialized" value="$PROJECT_DIR$" />
+    <option name="pathToMagentoForNewFiles" value="$PROJECT_DIR$" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855924" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>14</line>
+      <resource><![CDATA[.idea/misc.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="9" end-line="14"><![CDATA[    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" />
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855925" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>8</line>
+      <resource><![CDATA[.idea/modules.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="3" end-line="8"><![CDATA[  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PrayerRequest.iml" filepath="$PROJECT_DIR$/.idea/PrayerRequest.iml" />
+    </modules>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855930" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>13</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-analysis-storage.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="8" end-line="13"><![CDATA[        <InsightAnalysis duration="16" href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/2" nbViolations="43" nextGrade="BRONZE" number="2" reference="c5f479d997ab481ed97e3af68fcb22b8357ae119" remediationCostForNextGrade="-1" status="finished" />
+        <InsightAnalysis duration="52" href="https://insight.sensiolabs.com/api/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/1" nbViolations="43" nextGrade="BRONZE" number="1" reference="19eae5b06098a5abb64d828beee9df9e75a0ebd1" remediationCostForNextGrade="-1" status="finished" />
+      </list>
+    </option>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855897" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>7</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-settings.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="2" end-line="7"><![CDATA[<project version="4">
+  <component name="SensioLabsInsightSettings">
+    <option name="projectUuid" value="ca5c8c66-8cba-4de0-8659-c9710c9f9a69" />
+    <option name="projectName" value="PrayerRequests" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855856" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>7</line>
+      <resource><![CDATA[.idea/symfony2.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="2" end-line="7"><![CDATA[<project version="4">
+  <component name="Symfony2PluginSettings">
+    <option name="pluginEnabled" value="true" />
+    <option name="phpHighlightServices" value="true" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855840" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>6</line>
+      <resource><![CDATA[.idea/vcs.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="1" end-line="6"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855911" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>1085</line>
+      <resource><![CDATA[.idea/workspace.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="1080" end-line="1085"><![CDATA[          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855899" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>47</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/EventListener/Authorization/VerifyUsernameListener.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="42" end-line="47"><![CDATA[
+        if ($currentUser && !$authUser->getEnabled()) {
+            throw new HttpException(403, "I'm sorry, but your account has been disabled. Please contact an administrator and request that they enable your account");
+        }
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855850" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>13</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Resources/config/routing.yml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="8" end-line="13"><![CDATA[    prefix: /{username}
+
+action:
+    resource: @JesseMaxwellPrayerBundle/Controller/ActionController.php
+    type: annotation
+    prefix: /{username}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855833" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>25</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Resources/config/schema.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="20" end-line="25"><![CDATA[    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+</database>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855841" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>25</line>
+      <resource><![CDATA[src/JesseMaxwellPrayerBundle/Resources/config/schema.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="20" end-line="25"><![CDATA[    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+</database>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855896" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>18</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Resources/config/services.yml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="13" end-line="18"><![CDATA[        class: JesseMaxwell\PrayerBundle\EventListener\Authorization\VerifyUsernameListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+    prayer.verify_action:
+        class: JesseMaxwell\PrayerBundle\Services\VerifyUserAction
+        arguments: [ @service_container ]]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855853" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>9</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Resources/config/validation.yml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="4" end-line="9"><![CDATA[            - NotBlank:
+                message: Please enter a title for your prayer request.
+            - JesseMaxwell\PrayerBundle\Validator\Constraints\UniqueTitle: ~
+        date:
+            - NotBlank: ~
+            - Date: ~]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855875" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>85</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Services/ResponseMessage.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="80" end-line="85"><![CDATA[            'success' => false,
+            'content' => $message,
+            'errors'  => false,
+        ];
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855829" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>49</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="44" end-line="49"><![CDATA[
+        if ($prayerRequest && $user->getId() !== $prayerRequest->getUserId()) {
+            throw new HttpException(403, 'You are not allowed to access that prayer request.');
+        }
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855927" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>38</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitle.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="33" end-line="38"><![CDATA[
+    public function validatedBy()
+    {
+        return 'unique_title';
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855935" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="codestyle">
       <line>51</line>
-      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Controller/FrontendController.php]]></resource>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php]]></resource>
       <title>Text files should end with a newline character</title>
       <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
-      <context start-line="46" end-line="51"><![CDATA[            'you'     => $this->get('request')->get('username')
-        );
-
-        return new JsonResponse($response);
+      <context start-line="46" end-line="51"><![CDATA[
+        if ($requestModel && $requestModel->getUserId() === $userId) {
+            throw new HttpException(409, "You already have a prayer request titled that.");
+        }
     }
 }]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983736" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855870" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="codestyle">
       <line>15</line>
@@ -38,7 +313,7 @@
     env: PUPPET_GEM_VERSION="~> 3.0"
   - rvm: 2.0.0
     env: PUPPET_GEM_VERSION="~> 3.0"]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983739" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855909" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="codestyle">
       <line>31</line>
@@ -51,7 +326,7 @@
       env: PUPPET_GEM_VERSION="~> 3.2.0"
 notifications:
   email: false]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983744" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855918" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="codestyle">
       <line>14</line>
@@ -64,7 +339,7 @@ notifications:
         }
     }
 }]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983732" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855895" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="codestyle">
       <line>11</line>
@@ -77,7 +352,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983719" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855862" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="codestyle">
       <line>10</line>
@@ -90,7 +365,7 @@ limitations under the License.]]></context>
       ref: '1.0.1'
   symlinks:
     supervisord: "#{source_dir}"]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983734" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855900" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="deadcode">
       <line>12</line>
@@ -108,7 +383,7 @@ $loader->unregister();
 $apcLoader->register(true);
 */
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983725" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855878" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="deadcode">
       <line>19</line>
@@ -126,7 +401,7 @@ $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983715" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855857" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="deadcode">
       <line>23</line>
@@ -144,7 +419,7 @@ $kernel->loadClassCache();
 //Request::enableHttpMethodParameterOverride();
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983737" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855903" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="deadcode">
       <line>26</line>
@@ -162,7 +437,207 @@ $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983748" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855931" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>520</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequest.php]]></resource>
+      <title>Code should not be duplicated</title>
+      <message><![CDATA[The next 62 lines appear both in src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequest.php:520 and src/JesseMaxwell/PrayerBundle/Model/om/BaseUser.php:370.]]></message>
+      <context start-line="515" end-line="525"><![CDATA[                    $this->postInsert($con);
+                } else {
+                    $this->postUpdate($con);
+                }
+                $this->postSave($con);
+                PrayerRequestPeer::addInstanceToPool($this);
+            } else {
+                $affectedRows = 0;
+            }
+            $con->commit();
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855884" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>632</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequest.php]]></resource>
+      <title>Code should not be duplicated</title>
+      <message><![CDATA[The next 97 lines appear both in src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequest.php:632 and src/JesseMaxwell/PrayerBundle/Model/om/BaseUser.php:464.]]></message>
+      <context start-line="627" end-line="637"><![CDATA[                        break;
+                    case '`user_id`':
+                        $stmt->bindValue($identifier, $this->user_id, PDO::PARAM_INT);
+                        break;
+                    case '`answered`':
+                        $stmt->bindValue($identifier, (int) $this->answered, PDO::PARAM_INT);
+                        break;
+                }
+            }
+            $stmt->execute();
+        } catch (Exception $e) {]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855844" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>118</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestQuery.php]]></resource>
+      <title>Code should not be duplicated</title>
+      <message><![CDATA[The next 39 lines appear both in src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestQuery.php:118 and src/JesseMaxwell/PrayerBundle/Model/om/BaseUserQuery.php:106.]]></message>
+      <context start-line="113" end-line="123"><![CDATA[        if ((null !== ($obj = PrayerRequestPeer::getInstanceFromPool((string) $key))) && !$this->formatter) {
+            // the object is already in the instance pool
+            return $obj;
+        }
+        if ($con === null) {
+            $con = Propel::getConnection(PrayerRequestPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+        }
+        $this->basePreSelect($con);
+        if ($this->formatter || $this->modelAlias || $this->with || $this->select
+         || $this->selectColumns || $this->asColumns || $this->selectModifiers
+         || $this->map || $this->having || $this->joins) {]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855865" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>169</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestQuery.php]]></resource>
+      <title>Code should not be duplicated</title>
+      <message><![CDATA[The next 61 lines appear both in src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestQuery.php:169 and src/JesseMaxwell/PrayerBundle/Model/om/BaseUserQuery.php:157.]]></message>
+      <context start-line="164" end-line="174"><![CDATA[        }
+        $obj = null;
+        if ($row = $stmt->fetch(PDO::FETCH_NUM)) {
+            $obj = new PrayerRequest();
+            $obj->hydrate($row);
+            PrayerRequestPeer::addInstanceToPool($obj, (string) $key);
+        }
+        $stmt->closeCursor();
+
+        return $obj;
+    }]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855893" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="major" category="bugrisk">
+      <line>685</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestPeer.php]]></resource>
+      <title>Missing use statement should be avoided</title>
+      <message><![CDATA[The Exception class resolves to the following classes: Assetic\Exception\Exception or Symfony\Component\Config\Definition\Exception\Exception or Symfony\Component\Security\Acl\Exception\Exception or Symfony\Component\Serializer\Exception\Exception.
+Did you forget to add a corresponding use statement for one of them?]]></message>
+      <context start-line="680" end-line="690"><![CDATA[            $affectedRows += BasePeer::doDelete($criteria, $con);
+            PrayerRequestPeer::clearRelatedInstancePool();
+            $con->commit();
+
+            return $affectedRows;
+        } catch (Exception $e) {
+            $con->rollBack();
+            throw $e;
+        }
+    }
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855848" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="major" category="bugrisk">
+      <line>670</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BaseUserPeer.php]]></resource>
+      <title>Missing use statement should be avoided</title>
+      <message><![CDATA[The Exception class resolves to the following classes: Assetic\Exception\Exception or Symfony\Component\Config\Definition\Exception\Exception or Symfony\Component\Security\Acl\Exception\Exception or Symfony\Component\Serializer\Exception\Exception.
+Did you forget to add a corresponding use statement for one of them?]]></message>
+      <context start-line="665" end-line="675"><![CDATA[            $affectedRows += BasePeer::doDelete($criteria, $con);
+            UserPeer::clearRelatedInstancePool();
+            $con->commit();
+
+            return $affectedRows;
+        } catch (Exception $e) {
+            $con->rollBack();
+            throw $e;
+        }
+    }
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855874" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="bugrisk">
+      <line>306</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestPeer.php]]></resource>
+      <title>Object parameters should be type hinted</title>
+      <message><![CDATA[The parameter obj, which is an object, should be typehinted.]]></message>
+      <context start-line="301" end-line="311"><![CDATA[     * and retrieveByPK*() calls.
+     *
+     * @param PrayerRequest $obj A PrayerRequest object.
+     * @param      string $key (optional) key to use for instance map (for performance boost if key was already calculated externally).
+     */
+    public static function addInstanceToPool($obj, $key = null)
+    {
+        if (Propel::isInstancePoolingEnabled()) {
+            if ($key === null) {
+                $key = (string) $obj->getId();
+            } // if key === null]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855908" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="bugrisk">
+      <line>703</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestPeer.php]]></resource>
+      <title>Object parameters should be type hinted</title>
+      <message><![CDATA[The parameter obj, which is an object, should be typehinted.]]></message>
+      <context start-line="698" end-line="708"><![CDATA[     * @param PrayerRequest $obj The object to validate.
+     * @param      mixed $cols Column name or array of column names.
+     *
+     * @return mixed TRUE if all columns are valid or the error message of the first invalid column.
+     */
+    public static function doValidate($obj, $cols = null)
+    {
+        $columns = array();
+
+        if ($cols) {
+            $dbMap = Propel::getDatabaseMap(PrayerRequestPeer::DATABASE_NAME);]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855929" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="bugrisk">
+      <line>291</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BaseUserPeer.php]]></resource>
+      <title>Object parameters should be type hinted</title>
+      <message><![CDATA[The parameter obj, which is an object, should be typehinted.]]></message>
+      <context start-line="286" end-line="296"><![CDATA[     * and retrieveByPK*() calls.
+     *
+     * @param User $obj A User object.
+     * @param      string $key (optional) key to use for instance map (for performance boost if key was already calculated externally).
+     */
+    public static function addInstanceToPool($obj, $key = null)
+    {
+        if (Propel::isInstancePoolingEnabled()) {
+            if ($key === null) {
+                $key = (string) $obj->getId();
+            } // if key === null]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855933" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="bugrisk">
+      <line>688</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/om/BaseUserPeer.php]]></resource>
+      <title>Object parameters should be type hinted</title>
+      <message><![CDATA[The parameter obj, which is an object, should be typehinted.]]></message>
+      <context start-line="683" end-line="693"><![CDATA[     * @param User $obj The object to validate.
+     * @param      mixed $cols Column name or array of column names.
+     *
+     * @return mixed TRUE if all columns are valid or the error message of the first invalid column.
+     */
+    public static function doValidate($obj, $cols = null)
+    {
+        $columns = array();
+
+        if ($cols) {
+            $dbMap = Propel::getDatabaseMap(UserPeer::DATABASE_NAME);]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855889" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle">
+      <line>8</line>
+      <resource><![CDATA[app/propel/migrations/PropelMigration_1436989095.php]]></resource>
+      <title>PHP code should follow PSR-1 basic coding standard</title>
+      <message><![CDATA[Class names should be declared in StudlyCaps. You should rename this class to comply with PSR-1.]]></message>
+      <context start-line="3" end-line="13"><![CDATA[/**
+ * Data object containing the SQL and PHP code to migrate the database
+ * up to version 1436989095.
+ * Generated on 2015-07-15 19:38:15 by vagrant
+ */
+class PropelMigration_1436989095
+{
+
+    public function preUp($manager)
+    {
+        // add the pre-migration code here]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855888" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="deadcode">
       <line>21</line>
@@ -180,7 +655,7 @@ $kernel->terminate($request, $response);
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983726" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855879" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="deadcode">
       <line>23</line>
@@ -198,7 +673,239 @@ $kernel->terminate($request, $response);
         $loader->load('services.yml');
     }
 }]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983741" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855914" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>9</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Controller/ListController.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class JesseMaxwell\PrayerBundle\Model\UserQuery is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="4" end-line="14"><![CDATA[
+use FOS\RestBundle\Controller\Annotations as Rest;
+use FOS\RestBundle\Controller\FOSRestController;
+
+use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Proxies\__CG__\JesseMaxwell\PrayerBundle\Entity\User;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855885" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>10</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Controller/ListController.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Proxies\__CG__\JesseMaxwell\PrayerBundle\Entity\User is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="5" end-line="15"><![CDATA[use FOS\RestBundle\Controller\Annotations as Rest;
+use FOS\RestBundle\Controller\FOSRestController;
+
+use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Proxies\__CG__\JesseMaxwell\PrayerBundle\Entity\User;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855871" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>13</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Controller/ListController.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Symfony\Component\HttpKernel\Exception\HttpException is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="8" end-line="18"><![CDATA[use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Proxies\__CG__\JesseMaxwell\PrayerBundle\Entity\User;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+class ListController extends FOSRestController
+{
+    /**]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855828" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>25</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/EventListener/Authorization/VerifyUsernameListener.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Doctrine\ORM\EntityManager is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="20" end-line="30"><![CDATA[ **/
+
+namespace JesseMaxwell\PrayerBundle\EventListener\Authorization;
+
+
+use Doctrine\ORM\EntityManager;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855837" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>27</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/EventListener/Authorization/VerifyUsernameListener.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Symfony\Component\Config\Definition\Exception\Exception is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="22" end-line="32"><![CDATA[namespace JesseMaxwell\PrayerBundle\EventListener\Authorization;
+
+
+use Doctrine\ORM\EntityManager;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+
+class VerifyUsernameListener]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855912" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>30</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/EventListener/Authorization/VerifyUsernameListener.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Symfony\Component\Security\Core\Exception\AccessDeniedException is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="25" end-line="35"><![CDATA[use Doctrine\ORM\EntityManager;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+
+class VerifyUsernameListener
+{
+    public function onKernelController(FilterControllerEvent $event)
+    {]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855845" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>7</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Form/Type/PrayerRequestType.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Symfony\Component\OptionsResolver\OptionsResolver is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="2" end-line="12"><![CDATA[
+namespace JesseMaxwell\PrayerBundle\Form\Type;
+
+use Propel\PropelBundle\Form\BaseAbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class PrayerRequestType extends BaseAbstractType
+{
+    protected $options = array(
+        'data_class' => 'JesseMaxwell\PrayerBundle\Model\PrayerRequest',]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855830" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>5</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/map/PrayerRequestTableMap.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class RelationMap is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="1" end-line="10"><![CDATA[<?php
+
+namespace JesseMaxwell\PrayerBundle\Model\map;
+
+use \RelationMap;
+use \TableMap;
+
+
+/**
+ * This class defines the structure of the 'prayer_request' table.]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855851" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>5</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Model/map/UserTableMap.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class RelationMap is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="1" end-line="10"><![CDATA[<?php
+
+namespace JesseMaxwell\PrayerBundle\Model\map;
+
+use \RelationMap;
+use \TableMap;
+
+
+/**
+ * This class defines the structure of the 'user' table.]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855920" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>25</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitle.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class JesseMaxwell\PrayerBundle\Model\PrayerRequest is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="20" end-line="30"><![CDATA[ **/
+
+namespace JesseMaxwell\PrayerBundle\Validator\Constraints;
+
+
+use JesseMaxwell\PrayerBundle\Model\PrayerRequest;
+use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
+
+class UniqueTitle extends Constraint]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855904" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>26</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitle.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="21" end-line="31"><![CDATA[
+namespace JesseMaxwell\PrayerBundle\Validator\Constraints;
+
+
+use JesseMaxwell\PrayerBundle\Model\PrayerRequest;
+use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
+
+class UniqueTitle extends Constraint
+{]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855849" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>28</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitle.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Symfony\Component\Validator\Context\ExecutionContextInterface is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="23" end-line="33"><![CDATA[
+
+use JesseMaxwell\PrayerBundle\Model\PrayerRequest;
+use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
+
+class UniqueTitle extends Constraint
+{
+    public $message = "I'm sorry, but you already have a prayer request with the same title.";
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855846" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode">
+      <line>28</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php]]></resource>
+      <title>Unused use statement should be avoided</title>
+      <message><![CDATA[The class Symfony\Component\HttpFoundation\Request is declared but never used. You should remove the use statement.]]></message>
+      <context start-line="23" end-line="33"><![CDATA[
+
+use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\ConstraintValidator;
+
+class UniqueTitleValidator extends ConstraintValidator]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855831" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="deadcode">
       <line>3</line>
@@ -213,7 +920,7 @@ use Symfony\Component\HttpFoundation\Request;
 $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 
 // Enable APC for autoloading to improve performance.]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983738" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855907" rel="self" type="text/html"/>
     </violation>
     <violation severity="critical" category="security">
       <line>62</line>
@@ -231,7 +938,7 @@ $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
         forward_agent: false
         forward_x11: false
         shell: 'bash -l']]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983708" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855836" rel="self" type="text/html"/>
     </violation>
     <violation severity="critical" category="security">
       <line>141</line>
@@ -249,7 +956,7 @@ apache:
         manage_user: false
         manage_group: false
         sendfile: 0]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=new#295983749" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855934" rel="self" type="text/html"/>
     </violation>
     <violation severity="critical" category="security">
       <line>279</line>
@@ -267,49 +974,64 @@ apache:
             name: prayer_requests
             sql: ''
     grants:]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983712" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855847" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="security">
-      <line>0</line>
-      <title>Symfony error pages should be customised</title>
-      <message><![CDATA[You should customize the 404 error page.]]></message>
-      <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983714" rel="self" type="text/html"/>
+    <violation severity="minor" category="architecture">
+      <line>33</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php]]></resource>
+      <title>The Symfony Dependency Injection Container should not be passed as an argument</title>
+      <message><![CDATA[A Symfony dependency injection container has been found as an argument.]]></message>
+      <context start-line="28" end-line="38"><![CDATA[
+class VerifyUserAction
+{
+    protected $username;
+
+    public function __construct(ContainerInterface $container)
+    {
+        $this->username = $container->get('request')->attributes->get('username');
+    }
+
+    /**]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855881" rel="self" type="text/html"/>
     </violation>
-    <violation severity="info" category="security">
-      <line>0</line>
-      <title>Symfony error pages should be customised</title>
-      <message><![CDATA[You should customize the 500 error page.]]></message>
-      <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983747" rel="self" type="text/html"/>
+    <violation severity="minor" category="architecture">
+      <line>37</line>
+      <resource><![CDATA[src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php]]></resource>
+      <title>The Symfony Dependency Injection Container should not be passed as an argument</title>
+      <message><![CDATA[A Symfony dependency injection container has been found as an argument.]]></message>
+      <context start-line="32" end-line="42"><![CDATA[
+class UniqueTitleValidator extends ConstraintValidator
+{
+    protected $username;
+
+    public function __construct(ContainerInterface $container)
+    {
+        $this->username = $container->get('request')->attributes->get('username');
+    }
+
+    public function validate($value, Constraint $context)]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=new#297855894" rel="self" type="text/html"/>
     </violation>
     <violation severity="critical" category="security">
       <line>0</line>
       <title>Symfony2 secret should be changed</title>
       <message><![CDATA[The secret is the default one from the Symfony Standard Edition]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983707" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855835" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="security">
       <line>0</line>
       <title>Default session cookie's name should be changed.</title>
       <message><![CDATA[The session cookie name is the default one, PHPSESSID. You should consider overwriting it thanks to session.name parameter (see the official documentation).]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983742" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855915" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="security">
       <line>0</line>
       <title>A route should always have a valid HTTP method</title>
       <message><![CDATA[The route "_index" should have a routing method (GET/POST/PUT). It is mandatory.]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=new#295983716" rel="self" type="text/html"/>
-    </violation>
-    <violation severity="info" category="security">
-      <line>0</line>
-      <title>A route should always have a valid HTTP method</title>
-      <message><![CDATA[The route "homepage" should have a routing method (GET/POST/PUT). It is mandatory.]]></message>
-      <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983730" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855859" rel="self" type="text/html"/>
     </violation>
     <violation severity="major" category="security">
       <line>0</line>
@@ -317,7 +1039,25 @@ apache:
       <title>Symfony applications should not contain a config.php file</title>
       <message><![CDATA[This config.php file should only be used to bootstrap a Symfony application. Before releasing to production, you should remove it, otherwise attackers could get valuable insight about your application.]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983717" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855860" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="major" category="bugrisk">
+      <line>332</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain FIXME comments</title>
+      <message><![CDATA[FIXME comments are left in the code when a bug has been noticed but not fixed. You should fix the bug and remove the comment.]]></message>
+      <context start-line="327" end-line="337"><![CDATA[      <context start-line="10" end-line="20"><![CDATA[    'FreeBSD' => 'cache_disk',
+    default   => 'disk_cache',
+  }
+
+  if $::osfamily != 'FreeBSD' {
+    # FIXME: investigate why disk_cache was dependent on proxy
+    # NOTE: on FreeBSD disk_cache is compiled by default but proxy is not
+    Class['::apache::mod::proxy'] -> Class['::apache::mod::disk_cache']
+  }
+  Class['::apache::mod::cache'] -> Class['::apache::mod::disk_cache']
+]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855928" rel="self" type="text/html"/>
     </violation>
     <violation severity="major" category="bugrisk">
       <line>15</line>
@@ -335,7 +1075,313 @@ apache:
   }
   Class['::apache::mod::cache'] -> Class['::apache::mod::disk_cache']
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983718" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855861" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>350</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="345" end-line="355"><![CDATA[      <context start-line="347" end-line="357"><![CDATA[    }
+    $conf_template        = 'apache/httpd.conf.erb'
+    $keepalive            = 'Off'
+    $keepalive_timeout    = 15
+    $max_keepalive_requests = 100
+    $fastcgi_lib_path     = undef # TODO: revisit
+    $mime_support_package = 'misc/mime-support'
+    $mime_types_config    = '/usr/local/etc/mime.types'
+    $wsgi_socket_prefix   = undef
+    $docroot              = '/usr/local/www/apache24/data'
+    $error_documents_path = '/usr/local/www/apache24/error']]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855919" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>368</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="363" end-line="373"><![CDATA[      <context start-line="408" end-line="418"><![CDATA[    }
+    $conf_template        = 'apache/httpd.conf.erb'
+    $keepalive            = 'Off'
+    $keepalive_timeout    = 15
+    $max_keepalive_requests = 100
+    $fastcgi_lib_path     = undef # TODO: revisit
+    $mime_support_package = 'app-misc/mime-types'
+    $mime_types_config    = '/etc/mime.types'
+    $wsgi_socket_prefix   = undef
+    $docroot              = '/var/www/localhost/htdocs'
+    $error_documents_path = '/usr/share/apache2/error']]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855916" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>386</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="381" end-line="391"><![CDATA[      <context start-line="50" end-line="60"><![CDATA[      $configtemplate     = "${module_name}/redhat/beanstalkd_sysconfig.erb"
+      $hasstatus          = 'true'
+      $restart            = '/etc/init.d/beanstalkd restart'
+      $mode               = 0644
+    }
+    # TODO: add more OS support!
+    default: {
+      fail("ERROR [${module_name}]: I don't know how to manage this OS: ${::operatingsystem}")
+    }
+  }
+]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855838" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>404</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="399" end-line="409"><![CDATA[      <context start-line="944" end-line="954"><![CDATA[  end
+
+  validate do
+    debug("[validate]")
+
+    # TODO: this is put here to skip validation if ensure is not set. This
+    # is because there is a revalidation stage called later where the values
+    # are not set correctly. I tried tracing it - but have put in this
+    # workaround instead to skip. Must get to the bottom of this.
+    if ! value(:ensure)
+      return]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855906" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>422</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="417" end-line="427"><![CDATA[      <context start-line="42" end-line="52"><![CDATA[    end
+  end
+
+  # Convert log_level names to their respective numbers
+  def log_level_name_to_number(value)
+    #TODO make this 0-7 only
+    if value =~ /\d/
+      value
+    else
+      case value
+        when "panic" then "0"]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855858" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>440</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="435" end-line="445"><![CDATA[      <context start-line="142" end-line="152"><![CDATA[    end
+  end
+
+  def set_members
+    if @property_flush[:ensure] == :absent
+      # TODO: I don't know how to remove a node from a replset; unimplemented
+      #Puppet.debug "Removing all members from replset #{self.name}"
+      #@property_hash[:members].collect do |member|
+      #  rs_remove(member, master_host(@property_hash[:members]))
+      #end
+      return]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855923" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>458</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="453" end-line="463"><![CDATA[      <context start-line="38" end-line="48"><![CDATA[    #'VIEW',
+  )
+  # You can use ALL TABLES IN SCHEMA by passing schema_name to object_name
+
+  ## Validate that the object type's privilege is acceptable
+  # TODO: this is a terrible hack; if they pass "ALL" as the desired privilege,
+  #  we need a way to test for it--and has_database_privilege does not
+  #  recognize 'ALL' as a valid privilege name. So we probably need to
+  #  hard-code a mapping between 'ALL' and the list of actual privileges that
+  #  it entails, and loop over them to check them.  That sort of thing will
+  #  probably need to wait until we port this over to ruby, so, for now, we're]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855873" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>476</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="471" end-line="481"><![CDATA[      <context start-line="62" end-line="72"><![CDATA[case $source_type in
+    list)
+    if [ -z $suffix ] ; then
+        suffix="####"
+    fi
+    # TODO Make this more secure, for God's sake!
+    for param in $(cat $downloadedfile | grep "^$suffix" ) ; do
+        save_runtime_comment $param
+    done
+    ;;
+    tarball)]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855910" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>494</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="489" end-line="499"><![CDATA[      <context start-line="70" end-line="80"><![CDATA[      default => $::ntp_server,
+    }
+  }
+
+# Mcollective paths
+# TODO: Add Paths for Puppet Enterprise:
+# /opt/puppet/libexec/mcollective/mcollective/
+  $mcollective = $::operatingsystem ? {
+    debian  => '/usr/share/mcollective/plugins/mcollective',
+    ubuntu  => '/usr/share/mcollective/plugins/mcollective',
+    centos  => '/usr/libexec/mcollective/mcollective',]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855855" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>512</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="507" end-line="517"><![CDATA[      <context start-line="17" end-line="27"><![CDATA[    ruby_version => $ruby_version,
+    version      => $version,
+    proxy_url    => $proxy_url
+  }
+
+  # TODO: How can we get the gempath automatically using the ruby version
+  # Can we read the output of a command into a variable?
+  # e.g. $gempath = `usr/local/rvm/bin/rvm ${ruby_version} exec rvm gemdir`
+  $gempath = "${rvm_prefix}/rvm/gems/${ruby_version}/gems"
+  $binpath = "${rvm_prefix}/rvm/bin/"
+  $gemroot = "${gempath}/passenger-${version}"]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855891" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>530</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="525" end-line="535"><![CDATA[      <context start-line="23" end-line="33"><![CDATA[    # Regex is taken from the lexer of puppet
+    # puppet/pops/parser/lexer.rb but modified to match also
+    # negative values and disallow numbers prefixed with multiple
+    # 0's
+    #
+    # TODO these parameter should be a constant but I'm not sure
+    # if there is no risk to declare it inside of the module
+    # Puppet::Parser::Functions
+
+    # Integer numbers like
+    # -1234568981273]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855854" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>548</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="543" end-line="553"><![CDATA[      <context start-line="34" end-line="44"><![CDATA[    # Regex is taken from the lexer of puppet
+    # puppet/pops/parser/lexer.rb but modified to match also
+    # negative values and disallow invalid octal numbers or
+    # numbers prefixed with multiple 0's (except in hex numbers)
+    #
+    # TODO these parameters should be constants but I'm not sure
+    # if there is no risk to declare them inside of the module
+    # Puppet::Parser::Functions
+
+    # TODO decide if this should be used
+    # HEX numbers like]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855880" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>552</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="547" end-line="557"><![CDATA[    #
+    # TODO these parameters should be constants but I'm not sure
+    # if there is no risk to declare them inside of the module
+    # Puppet::Parser::Functions
+
+    # TODO decide if this should be used
+    # HEX numbers like]]]]><![CDATA[></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983705" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>43</line>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855932" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>562</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="557" end-line="567"><![CDATA[      <line>43</line>
+      <resource><![CDATA[vagrant/puphpet/puppet/modules/stdlib/lib/puppet/parser/functions/is_numeric.rb]]]]><![CDATA[></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]]]><![CDATA[></message>
+      <context start-line="38" end-line="48"><![CDATA[    #
+    # TODO these parameters should be constants but I'm not sure
+    # if there is no risk to declare them inside of the module
+    # Puppet::Parser::Functions
+
+    # TODO decide if this should be used
+    # HEX numbers like]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855867" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>566</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="561" end-line="571"><![CDATA[      <context start-line="38" end-line="48"><![CDATA[    #
+    # TODO these parameters should be constants but I'm not sure
+    # if there is no risk to declare them inside of the module
+    # Puppet::Parser::Functions
+
+    # TODO decide if this should be used
+    # HEX numbers like
+    # 0xaa230F
+    # 0X1234009C
+    # 0x0012
+    # -12FcD]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855868" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>584</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="579" end-line="589"><![CDATA[      <context start-line="46" end-line="56"><![CDATA[    # 0X1234009C
+    # 0x0012
+    # -12FcD
+    #numeric_hex = %r{^-?0[xX][0-9A-Fa-f]+$}
+
+    # TODO decide if this should be used
+    # OCTAL numbers like
+    # 01234567
+    # -045372
+    #numeric_oct = %r{^-?0[1-7][0-7]*$}
+]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855876" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="architecture">
+      <line>602</line>
+      <resource><![CDATA[.idea/sensiolabsinsight-violations.xml]]></resource>
+      <title>Source code should not contain TODO comments</title>
+      <message><![CDATA[TODO comments are left in the code when a feature (or a bug) isn't completely developed (or fixed). You should complete the implementation and remove the comment.]]></message>
+      <context start-line="597" end-line="607"><![CDATA[      <context start-line="1" end-line="11"><![CDATA[require File.join(File.dirname(__FILE__), '..', 'vcsrepo')
+
+Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) do
+  desc "Supports Git repositories"
+
+  ##TODO modify the commands below so that the su - is included
+  optional_commands :git => 'git',
+                    :su  => 'su'
+  has_features :bare_repositories, :reference_tracking, :ssh_identity, :multiple_remotes, :user
+
+  def create]]]]><![CDATA[></context>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855892" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>352</line>
@@ -353,7 +1399,7 @@ apache:
     $wsgi_socket_prefix   = undef
     $docroot              = '/usr/local/www/apache24/data'
     $error_documents_path = '/usr/local/www/apache24/error']]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983706" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855832" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>413</line>
@@ -371,7 +1417,7 @@ apache:
     $wsgi_socket_prefix   = undef
     $docroot              = '/var/www/localhost/htdocs'
     $error_documents_path = '/usr/share/apache2/error']]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983721" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855864" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>55</line>
@@ -389,7 +1435,7 @@ apache:
     }
   }
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983720" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855863" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>949</line>
@@ -407,7 +1453,7 @@ apache:
     # workaround instead to skip. Must get to the bottom of this.
     if ! value(:ensure)
       return]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983740" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855913" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>47</line>
@@ -425,7 +1471,7 @@ apache:
     else
       case value
         when "panic" then "0"]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983724" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855872" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>147</line>
@@ -443,7 +1489,7 @@ apache:
       #  rs_remove(member, master_host(@property_hash[:members]))
       #end
       return]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983743" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855917" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>43</line>
@@ -461,7 +1507,7 @@ apache:
   #  hard-code a mapping between 'ALL' and the list of actual privileges that
   #  it entails, and loop over them to check them.  That sort of thing will
   #  probably need to wait until we port this over to ruby, so, for now, we're]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983723" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855869" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>67</line>
@@ -479,7 +1525,7 @@ apache:
     done
     ;;
     tarball)]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983711" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855843" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>75</line>
@@ -497,7 +1543,7 @@ apache:
     debian  => '/usr/share/mcollective/plugins/mcollective',
     ubuntu  => '/usr/share/mcollective/plugins/mcollective',
     centos  => '/usr/libexec/mcollective/mcollective',]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983729" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855887" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>22</line>
@@ -515,7 +1561,7 @@ apache:
   $gempath = "${rvm_prefix}/rvm/gems/${ruby_version}/gems"
   $binpath = "${rvm_prefix}/rvm/bin/"
   $gemroot = "${gempath}/passenger-${version}"]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983710" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855842" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>28</line>
@@ -533,7 +1579,7 @@ apache:
 
     # Integer numbers like
     # -1234568981273]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983745" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855921" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>39</line>
@@ -551,7 +1597,7 @@ apache:
 
     # TODO decide if this should be used
     # HEX numbers like]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983705" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855827" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>43</line>
@@ -569,7 +1615,7 @@ apache:
     # 0X1234009C
     # 0x0012
     # -12FcD]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983746" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855926" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>51</line>
@@ -587,7 +1633,7 @@ apache:
     # -045372
     #numeric_oct = %r{^-?0[1-7][0-7]*$}
 ]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983735" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855902" rel="self" type="text/html"/>
     </violation>
     <violation severity="minor" category="architecture">
       <line>6</line>
@@ -605,7 +1651,35 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
   has_features :bare_repositories, :reference_tracking, :ssh_identity, :multiple_remotes, :user
 
   def create]]></context>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983733" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855898" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="critical" category="security">
+      <line>10</line>
+      <resource><![CDATA[app/Resources/TwigBundle/views/Exception/error500.json.twig]]></resource>
+      <title>Website should be protected against XSSVulnerability</title>
+      <message><![CDATA[Using the |raw filter or the {% autoescape false %} block in a Twig template exposes users to Cross-Site Scripting (XSS) attacks]]></message>
+      <context start-line="5" end-line="11"><![CDATA[    'error': {
+      'message': status_text,
+      'code': status_code,
+      'exception': exception.toarray
+    },
+  }|json_encode|raw
+}}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855834" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="critical" category="security">
+      <line>10</line>
+      <resource><![CDATA[app/Resources/TwigBundle/views/Exception/error.json.twig]]></resource>
+      <title>Website should be protected against XSSVulnerability</title>
+      <message><![CDATA[Using the |raw filter or the {% autoescape false %} block in a Twig template exposes users to Cross-Site Scripting (XSS) attacks]]></message>
+      <context start-line="5" end-line="11"><![CDATA[  'error': {
+    'message': status_text,
+    'code': status_code,
+    'exception': exception.toarray
+  },
+}|json_encode|raw
+}}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855901" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="performance">
       <line>0</line>
@@ -613,7 +1687,7 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
       <title>.htaccess should be avoided</title>
       <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983727" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855883" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="performance">
       <line>0</line>
@@ -621,7 +1695,7 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
       <title>.htaccess should be avoided</title>
       <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983722" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855866" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="performance">
       <line>0</line>
@@ -629,7 +1703,7 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
       <title>.htaccess should be avoided</title>
       <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983709" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855839" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="security">
       <line>0</line>
@@ -638,7 +1712,7 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
       <message><![CDATA[Default Apple touch Symfony2 favicon found.
              This reveals the backend engine of the application and makes it more vulnerable to attackers. Consider using a custom favicon instead - plus, your users will memorize your application more easily.]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983731" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855890" rel="self" type="text/html"/>
     </violation>
     <violation severity="info" category="security">
       <line>0</line>
@@ -647,7 +1721,7 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
       <message><![CDATA[Default default HiDPI Symfony2 favicon found.
              This reveals the backend engine of the application and makes it more vulnerable to attackers. Consider using a custom favicon instead - plus, your users will memorize your application more easily.]]></message>
       <context/>
-      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/4?status=existing#295983728" rel="self" type="text/html"/>
+      <link href="https://insight.sensiolabs.com/projects/ca5c8c66-8cba-4de0-8659-c9710c9f9a69/analyses/7?status=existing#297855886" rel="self" type="text/html"/>
     </violation>
   </violations>
   <grades>
@@ -660,14 +1734,14 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
   <failed>false</failed>
   <grade><![CDATA[none]]></grade>
   <next-grade><![CDATA[bronze]]></next-grade>
-  <begin-at><![CDATA[2015-07-13T18:47:31+0200]]></begin-at>
-  <end-at><![CDATA[2015-07-13T18:48:20+0200]]></end-at>
-  <duration>21</duration>
-  <number>4</number>
+  <begin-at><![CDATA[2015-07-16T03:50:56+0200]]></begin-at>
+  <end-at><![CDATA[2015-07-16T03:51:47+0200]]></end-at>
+  <duration>20</duration>
+  <number>7</number>
   <altered>false</altered>
-  <remediation-cost>87.5</remediation-cost>
-  <nb-violations>45</nb-violations>
-  <reference><![CDATA[3ffbf437a1ddfb3f8f81ea14e1c2ae02a5663ee5]]></reference>
+  <remediation-cost>191</remediation-cost>
+  <nb-violations>109</nb-violations>
+  <reference><![CDATA[37fea487034c2e05e7d76a889045445556fe80ea]]></reference>
   <configuration>
     <ignored-branches>
       <branch><![CDATA[gh-pages]]></branch>
@@ -726,13 +1800,16 @@ Puppet::Type.type(:vcsrepo).provide(:git, :parent => Puppet::Provider::Vcsrepo) 
     </parameters>
   </configuration>
   <previous-analyses-references>
+    <analysis-reference number="7">37fea487034c2e05e7d76a889045445556fe80ea</analysis-reference>
+    <analysis-reference number="6">2509f844b0be7f4a8c95bf481e5e1339488a7946</analysis-reference>
+    <analysis-reference number="5">3ffbf437a1ddfb3f8f81ea14e1c2ae02a5663ee5</analysis-reference>
     <analysis-reference number="4">3ffbf437a1ddfb3f8f81ea14e1c2ae02a5663ee5</analysis-reference>
     <analysis-reference number="3">a9a928d0d7efa745fe291b5492df1052df20eea4</analysis-reference>
     <analysis-reference number="2">c5f479d997ab481ed97e3af68fcb22b8357ae119</analysis-reference>
     <analysis-reference number="1">19eae5b06098a5abb64d828beee9df9e75a0ebd1</analysis-reference>
   </previous-analyses-references>
-  <nb-violations-new>2</nb-violations-new>
-  <nb-violations-existing>43</nb-violations-existing>
-  <nb-violations-fixed>2</nb-violations-fixed>
+  <nb-violations-new>34</nb-violations-new>
+  <nb-violations-existing>75</nb-violations-existing>
+  <nb-violations-fixed>12</nb-violations-fixed>
   <nb-violations-ignored>0</nb-violations-ignored>
 </analysis>

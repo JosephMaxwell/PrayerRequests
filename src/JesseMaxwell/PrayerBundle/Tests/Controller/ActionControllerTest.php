@@ -15,35 +15,44 @@
  * Copyright: 2015 (c) SwiftOtter Studios
  *
  * @author    Jesse Maxwell
- * @copyright Swift Otter Studios, 7/15/15
+ * @copyright Swift Otter Studios, 7/16/15
  * @package   default
  **/
-
-namespace JesseMaxwell\PrayerBundle\Tests\Security;
+namespace JesseMaxwell\PrayerBundle\Tests\Controller;
 
 use JesseMaxwell\PrayerBundle\Tests\JsonTestCase;
 
-/**
- * Database Requirements:
- * User 1: bassplayer7
- * User 2: keysplayer8
- *
- * PrayerRequest 1 should be pre-populated for bassplayer7.
- *
- * Class UsernameValidationTest
- *
- * @package JesseMaxwell\PrayerBundle\Tests\Security
- */
-
-class UsernameValidationTest extends JsonTestCase
+class ActionControllerTest extends JsonTestCase
 {
-    public function testDeniedAccess()
+    public function testUserNotDuplicateRequest()
     {
         $client = static::createClient();
+        $requestBody = json_encode(array(
+            "prayerrequest" => array(
+                "title" => "first test",
+                "date" => "01-02-2012"
+            )
+        ));
 
-        $crawler = $client->request('GET', '/unauthuser/get/request/all');
+        $client->request('PUT', '/bassplayer7/request/new', array(), array(), array('CONTENT_TYPE' => 'application/json'), $requestBody);
+        $response = $client->getResponse();
 
-        $this->assertJsonResponse($client->getResponse(), 401);
+        $this->assertEquals(409, $response->getStatusCode());
+        $this->assertJsonResponse($response, 409);
+    }
+
+    public function testBadRequest()
+    {
+        $requestBody = json_encode(array(
+            "title" => "first test",
+            "date" => "01-02-2012"
+        ));
+
+        $client = static::createClient();
+        $client->request('PUT', '/bassplayer7/request/new', array(), array(), array(), $requestBody);
+        $response = $client->getResponse();
+
+        $this->assertJsonResponse($response, 400);
     }
 
     public function testUserCantDeleteOtherRequest()
@@ -53,13 +62,5 @@ class UsernameValidationTest extends JsonTestCase
         $crawler = $client->request('DELETE', '/me/delete/request/3');
 
         $this->assertJsonResponse($client->getResponse(), 404);
-    }
-
-    public function testUserCantAccessOtherRequest()
-    {
-        $client = static::createClient();
-        $client->request('GET', '/keysplayer8/get/request/1');
-
-        $this->assertJsonResponse($client->getResponse(), 403);
     }
 }

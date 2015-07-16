@@ -25,6 +25,15 @@ use JesseMaxwell\PrayerBundle\Tests\JsonTestCase;
 
 class ListControllerTest extends JsonTestCase
 {
+    public function testDeniedAccess()
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('GET', '/unauthuser/get/request/all');
+
+        $this->assertJsonResponse($client->getResponse(), 401);
+    }
+
     public function testGetAllRequests()
     {
         $client = static::createClient();
@@ -54,5 +63,27 @@ class ListControllerTest extends JsonTestCase
         $this->assertJsonResponse($client->getResponse(), 200);
         $this->assertArrayHasKey("prayer_request", $decodedJson);
         $this->assertEquals(1, $decodedJson['prayer_request']['Id']);
+    }
+
+    public function testUserOnlyGetTheirRequests()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/bassplayer7/get/request/all');
+        $response = $client->getResponse();
+        $jsonContents = json_decode($response->getContent(), true);
+
+        $this->assertJsonResponse($response, 200);
+
+        foreach ($jsonContents["prayer_requests"] as $request) {
+            $this->assertEquals(1, $request["UserId"]);
+        }
+    }
+
+    public function testUserCantAccessOtherRequest()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/keysplayer8/get/request/1');
+
+        $this->assertJsonResponse($client->getResponse(), 403);
     }
 }

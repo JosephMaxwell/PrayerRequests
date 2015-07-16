@@ -41,10 +41,10 @@ class UniqueTitleValidator extends ConstraintValidator
 
     public function validate($value, Constraint $context)
     {
-        $requestModel = PrayerRequestQuery::create()->findOneByTitle($value);
         $userId = UserQuery::create()->findIdByUsername($this->username);
+        $matchFound = PrayerRequestQuery::create()->findIfUserHasRequest($value, $userId);
 
-        if ($requestModel && $requestModel->getUserId() === $userId) {
+        if ($matchFound) {
             throw new HttpException(409, "You already have a prayer request titled that.");
         }
     }

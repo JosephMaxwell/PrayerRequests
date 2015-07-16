@@ -280,7 +280,7 @@ mysql:
     databases:
         mysqlnd_zy5r67cqyf48:
             name: prayer_requests
-            sql: ''
+            sql: '/vagrant/database/prayer_request_seed.sql'
     grants:
         mysqlng_nk8xqksbonyt:
             user: jesse
