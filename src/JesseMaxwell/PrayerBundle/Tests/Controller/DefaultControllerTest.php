@@ -12,6 +12,9 @@ class DefaultControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertTrue($crawler->filter('html:contains("PrayerRequest")')->count() > 0);
+        $response = json_decode($client->getResponse()->getContent(), true);
+
+        $this->assertArrayHasKey('success', $response);
+        $this->assertContains("PrayerRequest", $response['success']);
     }
 }

@@ -2,7 +2,3 @@ jesse_maxwell_prayer:
     resource: "@JesseMaxwellPrayerBundle/Resources/config/routing.yml"
 #    type: annotation
     prefix: /
-
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation

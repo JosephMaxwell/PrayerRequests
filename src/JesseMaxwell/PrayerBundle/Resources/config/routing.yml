@@ -2,8 +2,12 @@ default:
     resource: @JesseMaxwellPrayerBundle/Controller/DefaultController.php
     type: annotation
 
-frontend:
-    resource: @JesseMaxwellPrayerBundle/Controller/FrontendController.php
+list:
+    resource: @JesseMaxwellPrayerBundle/Controller/ListController.php
     type: annotation
     prefix: /{username}
-    defaults: { _format: ~ }
+
+action:
+    resource: @JesseMaxwellPrayerBundle/Controller/ActionController.php
+    type: annotation
+    prefix: /{username}

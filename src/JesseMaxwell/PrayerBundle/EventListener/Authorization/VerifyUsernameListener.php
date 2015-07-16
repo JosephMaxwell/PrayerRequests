@@ -23,38 +23,25 @@ namespace JesseMaxwell\PrayerBundle\EventListener\Authorization;
 
 
 use Doctrine\ORM\EntityManager;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class VerifyUsernameListener
 {
-    protected $em;
-
-    public function __construct(EntityManager $em)
-    {
-        $this->em = $em;
-    }
-
     public function onKernelController(FilterControllerEvent $event)
     {
         $currentUser = $event->getRequest()->attributes->get('username');
+        $authUser = UserQuery::create()->findOneByUsername($currentUser);
 
-        $repository = $this->em->getRepository('JesseMaxwellPrayerBundle:User');
-
-        $query = $repository->createQueryBuilder('r')
-            ->where('r.username = :currentUser')
-            ->setParameter('currentUser', $currentUser)
-            ->getQuery();
-
-        $result = $query->getOneOrNullResult();
-
-        if ($currentUser && !$result) {
-            throw new AccessDeniedException("I'm sorry, but you are not authorized to access the system.");
+        if (!$authUser && $currentUser) {
+            throw new HttpException(401, "I'm sorry, but you are not authorized to access the system.");
         }
 
-        if ($currentUser && !$result->getEnabled()) {
-            throw new AccessDeniedException("I'm sorry, but your account has been disabled. Please contact an administrator and request that they enable your account");
+        if ($currentUser && !$authUser->getEnabled()) {
+            throw new HttpException(403, "I'm sorry, but your account has been disabled. Please contact an administrator and request that they enable your account");
         }
     }
 }

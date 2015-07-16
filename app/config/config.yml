@@ -87,9 +87,21 @@ sensio_framework_extra:
 
 fos_rest:
     allowed_methods_listener: true
+    param_fetcher_listener: true
+    body_listener: true
+    format_listener:
+        rules:
+            - { path: '^/', priorities: [json], fallback_format: json, prefer_extension: false }
+    routing_loader:
+        default_format: json
+        include_format: true
     view:
         view_response_listener: force
     disable_csrf_role: ROLE_API
+    exception:
+        enabled: true
+    access_denied_listener:
+        json: true
 
 # Swiftmailer Configuration
 swiftmailer:

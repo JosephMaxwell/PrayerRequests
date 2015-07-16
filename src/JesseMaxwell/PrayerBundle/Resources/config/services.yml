@@ -1,9 +1,12 @@
 services:
-#    jesse_maxwell_prayer.example:
-#        class: JesseMaxwell\PrayerBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
     prayer.responses:
         class: JesseMaxwell\PrayerBundle\Services\ResponseMessage
+
+    prayer.validator:
+        class: JesseMaxwell\PrayerBundle\Validator\Constraints\UniqueTitleValidator
+        arguments: [ @service_container ]
+        tags:
+            - { name: validator.constraint_validator, alias: unique_title }
 
 # Verification:
     prayer.verify_username:
@@ -13,9 +16,4 @@ services:
             - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
     prayer.verify_action:
         class: JesseMaxwell\PrayerBundle\Services\VerifyUserAction
-        arguments: [ @doctrine.orm.entity_manager ]
-
-# Model Classes:
-    model.persistence_handler:
-        class: JesseMaxwell\PrayerBundle\Entity\PrayerRequestPersistenceHandler
         arguments: [ @doctrine.orm.entity_manager ]

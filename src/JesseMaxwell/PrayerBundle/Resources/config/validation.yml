@@ -1,0 +1,9 @@
+JesseMaxwell\PrayerBundle\Model\PrayerRequest:
+    getters:
+        title:
+            - NotBlank:
+                message: Please enter a title for your prayer request.
+            - JesseMaxwell\PrayerBundle\Validator\Constraints\UniqueTitle: ~
+        date:
+            - NotBlank: ~
+            - Date: ~
