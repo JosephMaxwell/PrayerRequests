@@ -6,8 +6,11 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 
 use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Proxies\__CG__\JesseMaxwell\PrayerBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ListController extends FOSRestController
@@ -40,6 +43,8 @@ class ListController extends FOSRestController
         if (!$prayerRequest) {
             throw new NotFoundHttpException("Prayer request not found");
         }
+
+        $this->get('prayer.verify_action')->verifyPrayerRequestRelationship($prayerRequest);
 
         return array('prayer_request' => $prayerRequest->toArray());
     }

@@ -31,10 +31,28 @@ class ListControllerTest extends JsonTestCase
         $client->request('GET', '/bassplayer7/get/request/all');
 
         $this->assertJsonResponse($client->getResponse(), 200);
+        $this->assertArrayHasKey(
+            "prayer_requests",
+            json_decode($client->getResponse()->getContent(), true)
+        );
     }
 
     public function testMethodNotAllowed()
     {
+        $client = static::createClient();
+        $client->request('POST', '/bassplayer7/get/request/all');
 
+        $this->assertJsonResponse($client->getResponse(), 405);
+    }
+
+    public function testRequestById()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/bassplayer7/get/request/1');
+        $decodedJson = json_decode($client->getResponse()->getContent(), true);
+
+        $this->assertJsonResponse($client->getResponse(), 200);
+        $this->assertArrayHasKey("prayer_request", $decodedJson);
+        $this->assertEquals(1, $decodedJson['prayer_request']['Id']);
     }
 }

@@ -23,6 +23,18 @@ namespace JesseMaxwell\PrayerBundle\Tests\Security;
 
 use JesseMaxwell\PrayerBundle\Tests\JsonTestCase;
 
+/**
+ * Database Requirements:
+ * User 1: bassplayer7
+ * User 2: keysplayer8
+ *
+ * PrayerRequest 1 should be pre-populated for bassplayer7.
+ *
+ * Class UsernameValidationTest
+ *
+ * @package JesseMaxwell\PrayerBundle\Tests\Security
+ */
+
 class UsernameValidationTest extends JsonTestCase
 {
     public function testDeniedAccess()
@@ -32,5 +44,22 @@ class UsernameValidationTest extends JsonTestCase
         $crawler = $client->request('GET', '/unauthuser/get/request/all');
 
         $this->assertJsonResponse($client->getResponse(), 401);
+    }
+
+    public function testUserCantDeleteOtherRequest()
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('DELETE', '/me/delete/request/3');
+
+        $this->assertJsonResponse($client->getResponse(), 404);
+    }
+
+    public function testUserCantAccessOtherRequest()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/keysplayer8/get/request/1');
+
+        $this->assertJsonResponse($client->getResponse(), 403);
     }
 }

@@ -21,31 +21,29 @@
 
 namespace JesseMaxwell\PrayerBundle\Services;
 
-use Doctrine\ORM\EntityManager;
-use JesseMaxwell\PrayerBundle\Entity\User;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use JesseMaxwell\PrayerBundle\Model\PrayerRequest;
+use JesseMaxwell\PrayerBundle\Model\UserQuery;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class VerifyUserAction
 {
-    protected $em;
-    protected $repository;
+    protected $username;
 
-    public function __construct(EntityManager $em)
+    public function __construct(ContainerInterface $container)
     {
-        $this->em = $em;
-        $this->repository = $em->getRepository('JesseMaxwellPrayerBundle:PrayerRequest');
+        $this->username = $container->get('request')->attributes->get('username');
     }
 
-    public function verifyUserPrayerRequestRelationship(User $user, $id)
+    /**
+     * @param \JesseMaxwell\PrayerBundle\Model\PrayerRequest $prayerRequest
+     */
+    public function verifyPrayerRequestRelationship(PrayerRequest $prayerRequest)
     {
-        $prayerRequest = $this->em->getRepository(
-            'JesseMaxwellPrayerBundle:PrayerRequest'
-        )->find($id);
+        $user = UserQuery::create()->findOneByUsername($this->username);
 
         if ($prayerRequest && $user->getId() !== $prayerRequest->getUserId()) {
-            throw new AccessDeniedException(
-                'Sorry, you can not update id ' . $id
-            );
+            throw new HttpException(403, 'You are not allowed to access that prayer request.');
         }
     }
 }

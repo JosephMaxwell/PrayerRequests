@@ -2,57 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7794961e-6dfa-4ad5-99b3-e112b980032f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/propel" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ActionController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestPeer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/om/BasePrayerRequestQuery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/om/BaseUser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/om/BaseUserPeer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/om/BaseUserQuery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/JsonTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/PrayerRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/PrayerRequestPeer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/PrayerRequestQuery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/map/PrayerRequestTableMap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Form/Type/PrayerRequestType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/propel/migrations/PropelMigration_1436989095.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/UserPeer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/UserQuery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/map/UserTableMap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/magicento/adminhtml.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/propel/sql/default.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/schema.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwellPrayerBundle/Resources/config/schema.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/propel/sql/sqldb.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/validation.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/FrontendController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Entity/PrayerRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Entity/PrayerRequestPersistenceHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Entity/PrayerRequestRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Entity/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/views/Default/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/FrontendControllerTest.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/DefaultControllerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PrayerRequest.iml" afterPath="$PROJECT_DIR$/.idea/PrayerRequest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/EventListener/Authorization/VerifyUsernameListener.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/EventListener/Authorization/VerifyUsernameListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/magicento.xml" afterPath="$PROJECT_DIR$/.idea/magicento.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrayerRequest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,38 +44,18 @@
       <file leaf-file-name="UsernameValidationTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="-27.5">
+              <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListControllerTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListControllerTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06535948">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/services.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonTestCase.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/JsonTestCase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="18" />
+            <state vertical-scroll-proportion="-23.75">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -130,8 +64,8 @@
       <file leaf-file-name="ListController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state vertical-scroll-proportion="-23.125">
+              <caret line="46" column="92" selection-start-line="46" selection-start-column="92" selection-end-line="46" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -140,11 +74,33 @@
       <file leaf-file-name="UniqueTitleValidator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125">
-              <caret line="47" column="88" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="52" />
               <folding>
                 <element signature="e#869#924#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerifyUserAction.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22875817">
+              <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+              <folding>
+                <element signature="e#855#905#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,7 +116,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Entity/PrayerRequest.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserOwnsPrayerRequest.php" />
-        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Entity/PrayerRequestPersistenceHandler.php" />
         <option value="$PROJECT_DIR$/web/.htaccess" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error500.json.twig" />
@@ -177,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/FrontendController.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/validation.yml" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Form/Type/PrayerRequestType.php" />
-        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ActionController.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php" />
@@ -190,10 +144,12 @@
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/DefaultControllerTest.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/JsonTest.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/JsonTestCase.php" />
-        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" />
-        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php" />
-        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php" />
+        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" />
+        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php" />
       </list>
     </option>
   </component>
@@ -515,11 +471,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
+              <option name="myItemId" value="EventListener" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Type" />
+              <option name="myItemId" value="Authorization" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -879,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/schema.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.079617836">
@@ -914,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/UserQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2849162">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#51#104#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24400872">
@@ -944,14 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03267974">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15083799">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1008,16 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125">
-          <caret line="47" column="88" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
-          <folding>
-            <element signature="e#869#924#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35947713">
@@ -1050,6 +970,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7452229">
+          <caret line="102" column="13" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1910828">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/EventListener/Authorization/VerifyUsernameListener.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2124183">
@@ -1058,10 +994,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/JsonTestCase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7452229">
-          <caret line="102" column="13" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.13071896">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/UserQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26143792">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1079,24 +1039,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state vertical-scroll-proportion="-23.125">
+          <caret line="46" column="92" selection-start-line="46" selection-start-column="92" selection-end-line="46" selection-end-column="92" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/JsonTestCase.php">
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="-23.75">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1104,24 +1056,28 @@
     <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1910828">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="52" />
+          <folding>
+            <element signature="e#869#924#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php">
+    <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06535948">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.22875817">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+          <folding>
+            <element signature="e#855#905#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
