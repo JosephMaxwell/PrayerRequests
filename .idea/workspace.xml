@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7794961e-6dfa-4ad5-99b3-e112b980032f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpunit.phar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ActionControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/JesseMaxwellPrayerBundle/Resources/config/schema.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/PrayerRequestQuery.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/PrayerRequestQuery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php" afterPath="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/puphpet/config.yaml" afterPath="$PROJECT_DIR$/vagrant/puphpet/config.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sensiolabsinsight-analysis-storage.xml" afterPath="$PROJECT_DIR$/.idea/sensiolabsinsight-analysis-storage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sensiolabsinsight-violations.xml" afterPath="$PROJECT_DIR$/.idea/sensiolabsinsight-violations.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/.vagrant/machines/default/parallels/action_set_name" afterPath="$PROJECT_DIR$/vagrant/.vagrant/machines/default/parallels/action_set_name" />
     </list>
     <ignored path="PrayerRequest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vagrant/puphpet/config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55414015">
-              <caret line="282" column="59" selection-start-line="282" selection-start-column="59" selection-end-line="282" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="248" column="18" selection-start-line="248" selection-start-column="18" selection-end-line="248" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -79,14 +67,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.310345">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.5421687">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Services/VerifyUserAction.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ListController.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Security/UsernameValidationTest.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Model/PrayerRequestQuery.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Validator/Constraints/UniqueTitleValidator.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Controller/ActionController.php" />
@@ -141,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/EventListener/UsernameValidationTest.php" />
         <option value="$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Tests/Controller/ListControllerTest.php" />
         <option value="$PROJECT_DIR$/vagrant/puphpet/config.yaml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -951,17 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.310345">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JesseMaxwell/PrayerBundle/Resources/config/schema.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06369427">
@@ -980,8 +957,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vagrant/puphpet/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55414015">
-          <caret line="282" column="59" selection-start-line="282" selection-start-column="59" selection-end-line="282" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="248" column="18" selection-start-line="248" selection-start-column="18" selection-end-line="248" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5421687">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
