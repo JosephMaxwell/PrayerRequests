@@ -7,17 +7,33 @@ use FOS\RestBundle\Controller\FOSRestController;
 
 use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
 use JesseMaxwell\PrayerBundle\Model\UserQuery;
-use Proxies\__CG__\JesseMaxwell\PrayerBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 class ListController extends FOSRestController
 {
     /**
+     * @ApiDoc(
+     *      section="Request",
+     *      description="Returns a list of all a users requests",
+     *      requirements={
+     *          {
+     *              "name"="username",
+     *              "dataType"="integer",
+     *              "requirement"="\d+",
+     *              "description"="Provided username to verify authenticity of the request."
+     *          }
+     *      },
+     *      statusCodes={
+     *          200="Returned when successful",
+     *          404="Returned when no prayer prayer requests are associated with that user"
+     *      }
+     * )
+     *
      * @Rest\View()
-     * @Route("/get/request/all", name="_get_all_requests")
+     * @Route("/request/all", name="_get_all_requests")
      * @Method("GET")
      */
     public function getAllRequestsAction()
@@ -33,8 +49,31 @@ class ListController extends FOSRestController
     }
 
     /**
+     * @ApiDoc(
+     *      section="Request",
+     *      description="Returns the prayer request the user requested.",
+     *      requirements={
+     *          {
+     *              "name"="username",
+     *              "dataType"="integer",
+     *              "requirement"="\d+",
+     *              "description"="Provided username to verify authenticity of the request."
+     *          },
+     *          {
+     *              "name"="id",
+     *              "dataType"="integer",
+     *              "requirement"="\d+",
+     *              "description"="ID of prayer request to return"
+     *          }
+     *      },
+     *      statusCodes={
+     *          200="Returned when successful",
+     *          404="Returned when the specified prayer request wasn't found.",
+     *          403="Returned when the specified prayer request isn't associated with the user which requested it"
+     *      }
+     * )
      * @Rest\View()
-     * @Route("/get/request/{id}", name="_get_request", requirements={"id": "\d+"})
+     * @Route("/request/{id}", name="_get_request", requirements={"id": "\d+"})
      * @Method("GET")
      */
     public function getRequestAction($id)

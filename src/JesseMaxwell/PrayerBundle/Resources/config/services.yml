@@ -4,7 +4,7 @@ services:
 
     prayer.validator:
         class: JesseMaxwell\PrayerBundle\Validator\Constraints\UniqueTitleValidator
-        arguments: [ @service_container ]
+        arguments: [ @request_stack ]
         tags:
             - { name: validator.constraint_validator, alias: unique_title }
 
@@ -15,4 +15,4 @@ services:
             - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
     prayer.verify_action:
         class: JesseMaxwell\PrayerBundle\Services\VerifyUserAction
-        arguments: [ @service_container ]
+        arguments: [ @request_stack ]

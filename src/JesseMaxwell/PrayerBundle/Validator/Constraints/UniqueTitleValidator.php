@@ -24,8 +24,7 @@ namespace JesseMaxwell\PrayerBundle\Validator\Constraints;
 
 use JesseMaxwell\PrayerBundle\Model\PrayerRequestQuery;
 use JesseMaxwell\PrayerBundle\Model\UserQuery;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
@@ -34,9 +33,9 @@ class UniqueTitleValidator extends ConstraintValidator
 {
     protected $username;
 
-    public function __construct(ContainerInterface $container)
+    public function __construct(RequestStack $requestStack)
     {
-        $this->username = $container->get('request')->attributes->get('username');
+        $this->username = $requestStack->getCurrentRequest()->attributes->get('username');
     }
 
     public function validate($value, Constraint $context)

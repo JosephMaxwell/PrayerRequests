@@ -23,16 +23,16 @@ namespace JesseMaxwell\PrayerBundle\Services;
 
 use JesseMaxwell\PrayerBundle\Model\PrayerRequest;
 use JesseMaxwell\PrayerBundle\Model\UserQuery;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class VerifyUserAction
 {
     protected $username;
 
-    public function __construct(ContainerInterface $container)
+    public function __construct(RequestStack $requestStack)
     {
-        $this->username = $container->get('request')->attributes->get('username');
+        $this->username = $requestStack->getCurrentRequest()->attributes->get('username');
     }
 
     /**

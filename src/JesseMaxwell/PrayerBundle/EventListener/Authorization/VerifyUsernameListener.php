@@ -22,12 +22,9 @@
 namespace JesseMaxwell\PrayerBundle\EventListener\Authorization;
 
 
-use Doctrine\ORM\EntityManager;
 use JesseMaxwell\PrayerBundle\Model\UserQuery;
-use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class VerifyUsernameListener
 {

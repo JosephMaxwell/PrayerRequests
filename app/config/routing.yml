@@ -1,4 +1,7 @@
 jesse_maxwell_prayer:
     resource: "@JesseMaxwellPrayerBundle/Resources/config/routing.yml"
-#    type: annotation
     prefix: /
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /docs

@@ -4,7 +4,6 @@ namespace JesseMaxwell\PrayerBundle\Form\Type;
 
 use Propel\PropelBundle\Form\BaseAbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class PrayerRequestType extends BaseAbstractType
 {

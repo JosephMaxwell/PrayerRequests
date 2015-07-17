@@ -1,4 +1,4 @@
-PrayerRequests
+Prayer Request API
 ======
 
 A Symfony project intended to work as an API back end for a prayer request application. The goal is to improve my testing skills, build on my knowledge of Symfony, and help me become more familiar with the API concept. Since it is practically just a database abstraction layer, I decided to go with more functional testing instead of unit testing.
@@ -12,6 +12,10 @@ Build the base models:<br />
 Migrate the schema to ensure all is set:<br />
 `php app/console propel:migration:generate-diff`<br />
 `php app/console propel:migration:migrate`
+
+# Documentation:
+Navigate to `/docs` to view the API documentation.
+
 
 # Functional Testing Requirements:
 

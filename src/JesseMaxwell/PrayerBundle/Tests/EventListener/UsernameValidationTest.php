@@ -19,17 +19,16 @@
  * @package   default
  **/
 
-namespace JesseMaxwell\PrayerBundle\Validator\Constraints;
+namespace JesseMaxwell\PrayerBundle\Tests\EventListener;
 
+use JesseMaxwell\PrayerBundle\Tests\JsonTestCase;
 
-use Symfony\Component\Validator\Constraint;
-
-class UniqueTitle extends Constraint
+/**
+ * Class UsernameValidationTest
+ *
+ * @package JesseMaxwell\PrayerBundle\Tests\EventListener
+ */
+class UsernameValidationTest extends JsonTestCase
 {
-    public $message = "I'm sorry, but you already have a prayer request with the same title.";
 
-    public function validatedBy()
-    {
-        return 'unique_title';
-    }
 }

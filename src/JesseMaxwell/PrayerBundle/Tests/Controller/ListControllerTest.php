@@ -29,7 +29,7 @@ class ListControllerTest extends JsonTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/unauthuser/get/request/all');
+        $crawler = $client->request('GET', '/unauthuser/request/all');
 
         $this->assertJsonResponse($client->getResponse(), 401);
     }
@@ -37,7 +37,7 @@ class ListControllerTest extends JsonTestCase
     public function testGetAllRequests()
     {
         $client = static::createClient();
-        $client->request('GET', '/bassplayer7/get/request/all');
+        $client->request('GET', '/bassplayer7/request/all');
 
         $this->assertJsonResponse($client->getResponse(), 200);
         $this->assertArrayHasKey(
@@ -49,7 +49,7 @@ class ListControllerTest extends JsonTestCase
     public function testMethodNotAllowed()
     {
         $client = static::createClient();
-        $client->request('POST', '/bassplayer7/get/request/all');
+        $client->request('POST', '/bassplayer7/request/all');
 
         $this->assertJsonResponse($client->getResponse(), 405);
     }
@@ -57,7 +57,7 @@ class ListControllerTest extends JsonTestCase
     public function testRequestById()
     {
         $client = static::createClient();
-        $client->request('GET', '/bassplayer7/get/request/1');
+        $client->request('GET', '/bassplayer7/request/1');
         $decodedJson = json_decode($client->getResponse()->getContent(), true);
 
         $this->assertJsonResponse($client->getResponse(), 200);
@@ -68,7 +68,7 @@ class ListControllerTest extends JsonTestCase
     public function testUserOnlyGetTheirRequests()
     {
         $client = static::createClient();
-        $client->request('GET', '/bassplayer7/get/request/all');
+        $client->request('GET', '/bassplayer7/request/all');
         $response = $client->getResponse();
         $jsonContents = json_decode($response->getContent(), true);
 
@@ -82,7 +82,7 @@ class ListControllerTest extends JsonTestCase
     public function testUserCantAccessOtherRequest()
     {
         $client = static::createClient();
-        $client->request('GET', '/keysplayer8/get/request/1');
+        $client->request('GET', '/keysplayer8/request/1');
 
         $this->assertJsonResponse($client->getResponse(), 403);
     }
