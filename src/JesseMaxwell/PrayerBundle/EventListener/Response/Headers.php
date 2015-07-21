@@ -32,7 +32,7 @@ class Headers
         $event->getResponse()->headers->set('Access-Control-Allow-Methods', 'GET, PUT, DELETE');
 
         if ($referer) {
-            $event->getResponse()->headers->set('Access-Control-Allow-Origin', $referer);
+            $event->getResponse()->headers->set('Access-Control-Allow-Origin', trim(',' $referer));
         }
     }
 }
