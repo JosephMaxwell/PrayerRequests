@@ -29,7 +29,7 @@ class ListController extends FOSRestController
      *      statusCodes={
      *          200="Returned when successful",
      *          404="Returned when no prayer prayer requests are associated with that user"
-     *      }
+     *      },
      * )
      *
      * @Rest\View()

@@ -145,6 +145,7 @@ class ActionController extends FOSRestController
         $request = $this->get('request');
         $userId = UserQuery::create()->findIdByUsername($request->get('username'));
         $statusCode = $prayerRequest->isNew() ? 201 : 204;
+        $headers = null;
 
         $form = $this->createForm(new PrayerRequestType(), $prayerRequest, array('method' => 'PUT'));
         $form->handleRequest($request);
@@ -153,17 +154,19 @@ class ActionController extends FOSRestController
         if ($form->isValid()) {
             $prayerRequest->save();
 
-            $response = new Response();
-            $response->setStatusCode($statusCode);
+            $content = array(
+                'id' => $prayerRequest->getId()
+            );
 
             if ($statusCode === 201) {
-                $response->headers->set('Location', $this->generateUrl("_get_request", array(
-                    'username' => $request->get('username'),
-                    'id' =>$prayerRequest->getId()),
-                    true));
-            }
+                $headers = array(
+                    'Location' => $this->generateUrl("_get_request", array(
+                        'username' => $request->get('username'),
+                        'id' => $prayerRequest->getId()), true)
+                );
 
-            return $response;
+            }
+            return $this->view($content, $statusCode, $headers);
         }
 
         return View::create($form, 400);

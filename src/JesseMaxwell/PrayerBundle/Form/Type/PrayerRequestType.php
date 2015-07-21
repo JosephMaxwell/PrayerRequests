@@ -28,8 +28,7 @@ class PrayerRequestType extends BaseAbstractType
         $builder->add('title');
         $builder->add('description');
         $builder->add('date', 'date', array(
-            'widget' => 'single_text',
-            'format' => 'MM-dd-yyyy',
+            'widget' => 'single_text'
         ));
         $builder->add('answered');
     }

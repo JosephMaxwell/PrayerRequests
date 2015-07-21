@@ -1,7 +1,9 @@
 services:
-    prayer.responses:
-        class: JesseMaxwell\PrayerBundle\Services\ResponseMessage
-
+    prayer.default.headers:
+        class: JesseMaxwell\PrayerBundle\EventListener\Response\Headers
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+# Validation
     prayer.validator:
         class: JesseMaxwell\PrayerBundle\Validator\Constraints\UniqueTitleValidator
         arguments: [ @request_stack ]
@@ -13,6 +15,7 @@ services:
         class: JesseMaxwell\PrayerBundle\EventListener\Authorization\VerifyUsernameListener
         tags:
             - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
     prayer.verify_action:
         class: JesseMaxwell\PrayerBundle\Services\VerifyUserAction
         arguments: [ @request_stack ]
